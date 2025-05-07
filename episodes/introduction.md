@@ -4,12 +4,15 @@ teaching: 10
 exercises: 0
 ---
 
-## Why is this important?
-The topic of reproducible research is important for several reasons:
+## Why does this matter?
 
-- Making research more reproducible contributes to continuous research improvement
-- Recent discussions of reproducibility crisis, that is many research studies being irreproducible, call for the need to broader awareness and increased skills in research reproducibility
-- Open and reproducible research are becoming the norm around the world following many global changes in how academic research is conducted, including a broad science reform around the world
-- Transparent, rigorous and reproducible research is an integral part of research integrity and responsible research conduct that researchers should follow
+Reproducibility is a key part of research integrity. When research is reproducible, others can check your work, build on it, and reuse it with confidence.
 
-To summarize, more reproducible research means: research improvement, mitigating reproducibility crisis, contributing to ongoing science reform and responsible research conduct.
+Making research reproducible helps:
+
+- Improve the quality and reliability of results
+- Respond to concerns about irreproducible studies in many fields
+- Support broader changes in research, including global efforts to make science more open
+- Align with funder, journal, and institutional expectations for transparency and rigor
+
+In short, reproducible research strengthens science, supports collaboration, and helps researchers meet growing expectations for responsible research conduct.
