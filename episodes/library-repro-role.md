@@ -9,54 +9,44 @@ exercises: 2
 - What is the role of libraries in research improvement?
 - How can library staff support researchers in improving reproducibility?
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- demonstrate understanding of libraries' central role in supporting reproducibility
-- provide examples of how libraries can support research reproducibility and its improvement
-
+- Describe how libraries support reproducible research
+- Identify ways library staff can help improve research practices
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Why Libraries?
 
-Academic libraries are uniquely positioned to provide support in the area of reproducible research. Open science is already at the core of many libraries’ work and many librarians provide direct and increasingly hands-on support to both early career and senior researchers at their institutions. Because reproducibility is strongly associated with open science/open research and because funders, journals, and other stakeholders begin to implement new requirements for not only open but also reproducible research, librarians can build on their expertise in helping preparing research outputs for sharing to also help make them reproducible.
+Libraries are well positioned to support reproducible research. Many already promote open access, open data, and good documentation practices. These skills and services align closely with reproducibility goals.
 
-## Reproducibility support from the libraries
+As funders and journals begin to expect not only open but also reproducible research, libraries can expand their support. Librarians work across disciplines and with researchers at all career stages. This makes them key partners in promoting transparency and improving research workflows.
 
-### Where can libraries help:
+## How Libraries Support Reproducibility
 
-- Awareness raising, teaching, training, and hands-on guidance
-- Help researchers being transparent about their full research workflow: research questions, methods, data, step-by-step procedures and analyses; help making the methods, data and analyses open (if possible in a given project)
-- Assist with making good documentation for all outputs and all stages of the research process
-- Assist with version control to track of versions of all outputs 
-- Help with the quality check of the methods, data and analyses
-- Verifying researchers’ work: helping with reproducing their own results 
+Libraries can help by:
 
+- Raising awareness and offering training on reproducible research
+- Supporting transparent research practices, including documenting methods, sharing data, and explaining analysis steps
+- Helping researchers create clear, consistent documentation for all stages of a project
+- Advising on version control tools to track changes in code, data, or manuscripts
+- Reviewing data and workflows to improve quality and clarity
+- Assisting researchers in reproducing their own results
 
 ::: challenge 
 
-## Exercise (Reflection)
+## Reflection
 
-What do you think is the most important area where libraries can provide support in making research more reproducible?
+What is one area where you think libraries can make the biggest difference in supporting reproducible research?
 
 :::
 
 ::: keypoints
 
-- Academic libraries are uniquely positioned to provide help and support in the area of open and reproducible research
-- Academic librarians can build on their expertise in making research outputs shareable and reusable to also help make them reproducible 
-- Academic libraries can offer training in reproducible research workflows in addition to open science trainings 
-
+- Libraries are natural partners in supporting open and reproducible research
+- Librarians can help researchers improve transparency, documentation, and workflows
+- Reproducibility support builds on existing library expertise in research data and scholarly communication
 
 :::
-
-
-
-
-
-
-
-
