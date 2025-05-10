@@ -32,6 +32,10 @@ Reproducibility can be improved in three key areas:
 
 ![6 helpful steps for reproducible research](fig/image2copy.png)
 
+:::: callout
+Using the right tools helps researchers automate tasks, track changes, and make their work easier to reproduce and reuse. Without them, even well-intentioned practices can fall short.
+::::
+
 ## Tools by Research Stage
 
 Different tools support different parts of the workflow. Below are examples by stage.
