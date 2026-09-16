@@ -59,12 +59,12 @@ Tools vary based on the type of research (quantitative vs qualitative).
 - **Git** – Version control for code and data
 - **Code quality tools** – [The Turing Way: Code Quality](https://the-turing-way.netlify.app/reproducible-research/code-quality.html)
 - **Containers** – Freeze environments (e.g., [renv](https://the-turing-way.netlify.app/reproducible-research/renv/renv-options.html))
-- **Code Ocean** – Share executable code capsules: [https://codeocean.com](https://codeocean.com)
+- **Code Ocean** – Share "code capsules" (a code capsule bundles your code, data, and computing environment together so someone else can run it without recreating your setup): [https://codeocean.com](https://codeocean.com)
 
 #### Qualitative Analysis
 
 - **Annotations** – Tools like [NVivo](https://help-nv11.qsrinternational.com/desktop/concepts/about_annotations.html) or [ATI](https://qdr.syr.edu/ati)
-- **Active Citation** – Linking sources to analysis: [example](https://www.princeton.edu/~amoravcs/library/ps.pdf)
+- **Active Citation** – a practice for qualitative research where claims in a paper link directly to the specific passage of source material that supports them, so a reader can check the evidence without re-doing the whole analysis: [example](https://www.princeton.edu/~amoravcs/library/ps.pdf)
 
 ### 3. Writing and Reporting
 
@@ -76,7 +76,7 @@ Tools for integrating code, results, and narrative.
 - **HackMD** – Collaborative markdown editor for co-writing
 - **Overleaf** – Online LaTeX for polished documents
 
-:::::::: challenge
+:::::::: discussion
 
 ## Exercises
 

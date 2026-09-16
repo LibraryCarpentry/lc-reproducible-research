@@ -26,7 +26,7 @@ As funders and journals begin to expect not only open but also reproducible rese
 
 ## How Libraries Support Reproducibility
 
-Libraries can help by:
+No single librarian is expected to do all of the following - different libraries build different combinations of this support depending on staffing, expertise, and institutional priorities. Libraries can help by:
 
 - Raising awareness and offering training on reproducible research
 - Supporting transparent research practices, including documenting methods, sharing data, and explaining analysis steps
@@ -35,11 +35,11 @@ Libraries can help by:
 - Reviewing data and workflows to improve quality and clarity
 - Assisting researchers in reproducing their own results
 
-::: challenge 
+::: discussion
 
 ## Reflection
 
-What is one area where you think libraries can make the biggest difference in supporting reproducible research?
+What is one area where you think libraries can make the biggest difference in supporting reproducible research? Given your own library's staffing and expertise, which of the areas above feel realistic to take on, and which would need new skills or partners?
 
 :::
 

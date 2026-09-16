@@ -1,7 +1,7 @@
 ---
 title: 'What is Reproducible Research?'
 teaching: 20
-exercises: 
+exercises: 20
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -40,7 +40,7 @@ Research results are **generalized** when results apply in other contexts or pop
 
 ::: challenge
 
-## Based on what we went through, we can say that a study has been reproduced when:
+## Which of these describes a reproduced study?
 
 1. Researchers apply similar methods to the original study in a new study
 1. Researchers re-analyze data from the original study and observe the same results
@@ -67,7 +67,7 @@ Tails = 1\
 Analysis method = Student t-test\
 ```
 
-After all data is collected (i.e. the researcher is done with the tossing) they start data analysis. They run a simple statistical test in the SPSS program - a Student t-test - to compare the number of observed tails outcomes against the chance level (which is 0.5 since the coin has two sides, and if it's fair, there should be a 50% chance of getting tails). The researcher observes that the number of tails they got is no different from chance - and so they found a support for their original hypothesis. The researcher makes the complete data table and detailed methods and analysis from the study available to the public.
+After all data is collected (i.e. the researcher is done with the tossing) they start data analysis. They run a simple statistical test in the SPSS program - a **Student t-test** (a common statistical test for comparing an observed average against an expected value) - to compare the number of observed tails outcomes against the chance level (which is 0.5 since the coin has two sides, and if it's fair, there should be a 50% chance of getting tails). The researcher observes that the number of tails they got is no different from chance - and so they found a support for their original hypothesis. The researcher makes the complete data table and detailed methods and analysis from the study available to the public.
 
 Another researcher downloads the data table and re-runs the exact same analysis in a different software using R programming language. They also observe that the number of tails is no different from chance. **They have reproduced the study!**
 
@@ -75,8 +75,29 @@ A third researcher reads about the reproduced study and decides to conduct a new
 
 Note, however, that in many different disciplines the word “reproduced” could be used in both the second and the third researcher case, that is to mean both reproducing and replicating the study.
 
+::: challenge
+
+## Reproduced, replicated, or generalized? (~5 min)
+
+For each scenario below, decide whether it describes reproducing, replicating, or generalizing a result.
+
+1. A team re-runs a colleague's published analysis script on the exact same dataset and gets the same numbers.
+2. A team collects new survey data using the same questionnaire and finds a similar pattern of responses.
+3. A team that found an effect in a lab study finds the same effect holds in a real-world field setting with a different population.
+
+::: solution
+
+1. Reproduced (same data, same method)
+2. Replicated (new data, same method, same question)
+3. Generalized (result extends to a different context/population)
+
+:::
+
+:::
 
 ::: discussion
+
+(~5 min)
 
 Can you provide additional examples of reproducible studies from various disciplines or research types?
 
@@ -95,6 +116,8 @@ Here we mean arriving at a similar (consistent) interpretation by following the 
 
 ::: discussion
 
+(~5 min)
+
 Discuss in pairs: Should we use the term “reproducibility” across different disciplines and research methodologies even though it might mean different things?
 
 :::
@@ -110,15 +133,15 @@ However, a reproducible project does not have to be fully open. For example, due
 ### Open does not mean reproducible.
 On the other hand, it is entirely possible to practice open science without following reproducibility principles. Materials, data, tools and code can be made openly available but if they don’t have necessary documentation, instruction on how to use them, error checks, proper versioning and organization - they are most probably not usable, and the project might not be reproducible.
 
-![](fig/image1.png)
+![Venn diagram showing that "open" and "reproducible" are overlapping but distinct categories of research practice](fig/image1.png)
 
 ## Reproducibility Crisis
 
 Problems with reproducibility of research have been noticed by many researchers, advisors and policy makers in the past several years and led to some even claim that there is a [“Reproducibility crisis”](https://www.nature.com/articles/533452a).
-However, not everyone agrees.
+However, not everyone agrees the "crisis" framing is the right one. Two examples that push back on it, from different angles:
 
-[https://www.pnas.org/doi/full/10.1073/pnas.1708272114](https://www.pnas.org/doi/full/10.1073/pnas.1708272114)
-[https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-05942-3](https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-05942-3)
+- [Is science really facing a reproducibility crisis, and do we need it to?](https://www.pnas.org/doi/full/10.1073/pnas.1708272114) (Fanelli, 2018) - questions whether the evidence supports "crisis" as an accurate description of the problem
+- [The reproducibility debate is an opportunity, not a crisis](https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-05942-3) (Munafò et al., 2022) - argues the current attention on reproducibility is better framed as a chance to improve research practice than as a crisis to be alarmed about
 
 ### Reasons for Irreproducibility
 
@@ -131,6 +154,8 @@ However, not everyone agrees.
 - Insufficient peer review
 
 ::: discussion
+
+(~10 min)
 
 Do you agree that there is a reproducibility crisis in academic research?\
 How many studies would have to reproduce successfully for the “crisis” to be over?\
