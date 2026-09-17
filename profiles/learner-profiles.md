@@ -13,3 +13,9 @@ Priya's prior knowledge: comfortable with data management concepts and basic Git
 Marcus supports the humanities and social sciences departments at a mid-sized university library. He has taught a few Software Carpentry workshops but has not worked directly with quantitative researchers on reproducibility. He is taking this lesson to prepare for a possible new "open and reproducible research" workshop series at his library, and wants to know realistically what his library could and couldn't offer without hiring new staff.
 
 Marcus's prior knowledge: general familiarity with open access and open data; no background in the technical tools covered in the Tools for Reproducible Research Workflows episode; interested in the scope/capacity question raised in the Role of the Libraries episode.
+
+## Deshawn, Reference and Instruction Librarian
+
+Deshawn has been a reference and instruction librarian for six years, mostly teaching one-shot information literacy sessions. He has never used Git, has not taken a Carpentries workshop as a learner or instructor, and does not write code. A colleague asked him to help staff a new "open science" service point, and he signed up for this lesson to figure out whether he actually has anything useful to offer researchers on reproducibility, or whether that's a job for someone more technical.
+
+Deshawn's prior knowledge: comfortable with library reference and instruction concepts; no version control, scripting, or statistics background at all; may need the more technical tool descriptions (Git, environment management, code capsules) explained from a genuine beginner's level, not just a refresher.
