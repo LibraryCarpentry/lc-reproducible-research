@@ -58,9 +58,10 @@ contact: 'team@librarycarpentry.org'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - introduction.md
-- reproducible-research-overview.md
+- understanding-reproducibility.md
+- making-research-checkable.md
 - repro-challenges.md
 - repro-tools.md
 - library-repro-role.md

@@ -21,6 +21,8 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+The previous episode ended with a question: what would you ask a researcher for, before you could judge whether their work can be checked? Often, the honest answer is that the researcher hasn't been able to provide it yet - not from unwillingness, but because reproducibility takes real time, skill, and sometimes runs into legal or ethical limits. This episode looks at why, and what a librarian can realistically do about it.
+
 ## Benefits for Science
 
 Reproducibility strengthens research by making it:
@@ -65,14 +67,14 @@ These challenges can be addressed with the right support:
 - **Technical issues**: Guidance on software documentation and environment capture (recording the software and versions needed to rerun an analysis) can help others reproduce results
 
 ::: callout
-**Back to Cool Access LA** (introduced in the previous episode): Dr. Torres's team is not short on motivation, documentation lets a new research assistant pick up the project and answer a peer reviewer's questions months later. Their real obstacle is that the interview recordings can't leave a secure system approved under the study's Institutional Review Board (IRB) protocol - a legal/ethical restriction, not a technical one.
+**Back to Cool Access LA** (introduced in the previous episode): a new research assistant is joining Dr. Torres's team and needs to pick up the project from the documentation alone - the README, codebook, and analysis scripts have to carry knowledge that would otherwise live only in Dr. Torres's head, and that takes time and skill to write well. Separately, the team's interview recordings stay in a secure system under the study's Institutional Review Board (IRB) protocol - a legal/ethical restriction, not a technical one, and one factor among several rather than the project's only obstacle.
 :::
 
 ::: discussion
 
 (~5 min)
 
-First, as a group, list four challenges researchers face in making work reproducible (use the list above or your own experience). Then pick one - Dr. Torres's interview-recording restriction, or one of your own - and talk with a partner about how you, as a librarian or support staff member, could help address it.
+First, as a group, list four challenges researchers face in making work reproducible (use the list above or your own experience). Then pick one - the documentation handoff to a new team member, Dr. Torres's interview-recording restriction, or one of your own - and with a partner, name one feasible next action that addresses it and who would take it.
 
 :::
 

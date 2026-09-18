@@ -5,7 +5,7 @@ title: 'Reference'
 ## Glossary
 
 Reproducibility
-: Obtaining the same results using the same data.
+: Obtaining the same results using the same data and the same analysis steps.
 
 Replicability
 : Achieving similar results with new data.
@@ -23,7 +23,7 @@ Open Science
 : The practice of making research outputs (data, code, methods, publications) openly available and accessible so that others can inspect, reuse, and build on them.
 
 Reproducibility Crisis
-: The documented finding across many research fields that a substantial proportion of published results cannot be reproduced or replicated by independent researchers. Also called the replication crisis; the framing itself is debated (see episode 2).
+: The documented finding across many research fields that a substantial proportion of published results cannot be reproduced or replicated by independent researchers. Also called the replication crisis; the framing itself is debated (see episode 3).
 
 Transparency
 : Making the data, code, and decisions behind a result visible to others, so a reader can trace how conclusions were reached.
