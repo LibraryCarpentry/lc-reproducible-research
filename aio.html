@@ -6,21 +6,27 @@
 <title>Reproducible Research Workflows: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="assets/styles.css">
-<script src="assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      config: ["MMLorHTML.js"],
-      jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML", "output/PreviewHTML"],
-      extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js", "fast-preview.js", "AssistiveMML.js", "a11y/accessibility-menu.js"],
-      TeX: {
-        extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
-      },
-      tex2jax: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
-        processEscapes: true
-      }
-    });
-    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><!-- Responsive Favicon for The Carpentries --><link rel="apple-touch-icon" sizes="180x180" href="favicons/lc/apple-touch-icon.png">
+<script src="assets/scripts.js" type="text/javascript"></script><!-- mathjax --><!-- NOTE: https://docs.mathjax.org/en/latest/output/mathml.html#mathml-support --><!-- Changes from V2 to V4: https://mathjax.github.io/MathJax-demos-web/convert-configuration/convert-configuration.html
+        Jax output/NativeMML is not yet implemented
+        Jax output/PreviewHTML is not yet implemented
+        Extension fast-preview is not yet implemented (but may be in a future release)
+    --><script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
+            processEscapes: true,
+            packages: ['base', 'ams', 'noerrors', 'noundefined']
+        },
+        options: {
+            ignoreHtmlClass: 'tex2jax_ignore',
+            processHtmlClass: 'tex2jax_process'
+        },
+        loader: {
+            load: ['a11y/assistive-mml', '[tex]/noerrors']
+        }
+    };
+    </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><!-- Responsive Favicon for The Carpentries --><link rel="apple-touch-icon" sizes="180x180" href="favicons/lc/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/lc/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicons/lc/favicon-16x16.png">
 <link rel="manifest" href="favicons/lc/site.webmanifest">
@@ -34,21 +40,24 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="lc-logo" alt="Library Carpentry" src="assets/images/library-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
-            <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#early-development-pre-alpha-through-alpha" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+        <a href="index.html">
+        <img id="lc-logo" alt="Library Carpentry" src="assets/images/library-logo.svg"></a>
+
+        <span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
+            <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
       </div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu">
+<li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -73,9 +82,8 @@
             </li>
           </ul>
 </li>
-      </div>
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu>
+<div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
         </button>
@@ -85,14 +93,15 @@
 </div>
     </div>
   </div>
-  <hr></header><nav class="navbar navbar-expand-xl bottom-nav library" aria-label="Main Navigation"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav library" aria-label="Main Navigation"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Menu</span>
     </button>
     <div class="nav-logo">
-      <img class="small-logo" alt="Library Carpentry" src="assets/images/library-logo-sm.svg">
-</div>
+      <a href="index.html">
+      <img class="small-logo" alt="Library Carpentry" src="assets/images/library-logo-sm.svg"></a>
+    </div>
     <div class="lesson-title-md">
       Reproducible Research Workflows
     </div>
@@ -137,32 +146,24 @@
       </fieldset>
     </form>
     -->
-    <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
+    <a id="search-button-nav" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div>
 <!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Reproducible Research Workflows
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
-    %
-  </div>
-  <div class="progress library">
-    <div class="progress-bar library" role="progressbar" style="width: %" aria-valuenow="" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
-    </div>
-  </div>
-</aside><div class="container">
+</nav><div class="container">
       <div class="row">
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Collapse" alt="Collapse" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <a id="search-button-sidebar" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
+          </div>
+          <div class="row mobile-row" id="theme-row-mobile">
+            <menu class="col theme-selector" id="theme-selector-sidebar">
+<li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -187,19 +188,19 @@
                   </li>
                 </ul>
 </li>
-            </div>
-          </div>
+            </menu>
+</div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Learner View
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="instructor/aio.html">Instructor View</a>
                       </div>
@@ -208,24 +209,24 @@
 <!--/div.accordion-item-->
                 </div>
 <!--/div.accordion-flush-->
+
               </div>
 <!--div.sidenav-view-selector -->
             </div>
 <!--/div.col -->
 
-            <hr>
-</div>
+          </div>
 <!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   EPISODES
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -305,26 +306,45 @@
             </div>
 
             <hr class="half-width">
-<div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+<div class="accordion accordion-flush" id="accordion-links-toggle">
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-links-toggle">
+                  <button class="accordion-button collapsed" id="links" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-links-toggle" aria-expanded="false" aria-controls="flush-collapse-links-toggle">
+                    LINKS
+                  </button>
+                </h2>
+                <div id="flush-collapse-links-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-links-toggle">
+                    <div class="accordion-body">
+                        <ul>
+<li>
+                            <a href="key-points.html">Key Points</a>
+                            </li>
+                            <li>
+                            <a href="reference.html#glossary">Glossary</a>
+                            </li>
+                            <li>
+                            <a href="profiles.html">Learner Profiles</a>
+                            </li>
+                        </ul>
+</div>
+                </div>
+                </div>
+<!--/div.accordion-item-->
+            </div>
+<!--/div.accordion-flush-->
+
+            <hr class="half-width">
+<div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     RESOURCES
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul>
-<li>
-                        <a href="key-points.html">Key Points</a>
-                      </li>
-                      <li>
-                        <a href="reference.html#glossary">Glossary</a>
-                      </li>
-                      <li>
-                        <a href="profiles.html">Learner Profiles</a>
-                      </li>
-                      <li><a href="reference.html">Reference</a></li>
+<li><a href="reference.html">Reference</a></li>
                     </ul>
 </div>
                 </div>
@@ -352,37 +372,34 @@
         <!-- START: inst/pkgdown/templates/content-extra.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <main id="main-content" class="main-content"><div class="container lesson-content">
-        
+        <h1>All in One View</h1>
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2024-05-12 |
+<p>Last updated on 2026-10-01 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
-<section><h2 class="section-heading" id="why-is-this-important">Why is this important?<a class="anchor" aria-label="anchor" href="#why-is-this-important"></a>
+<section><h2 class="section-heading" id="why-does-this-matter">Why does this matter?<a class="anchor" aria-label="anchor" href="#why-does-this-matter"></a>
 </h2>
 <hr class="half-width">
-<p>The topic of reproducible research is important for several
-reasons:</p>
+<p>Reproducibility is a key part of research integrity. When research is
+reproducible, others can check your work, build on it, and reuse it with
+confidence.</p>
+<p>Making research reproducible helps:</p>
 <ul>
-<li>Making research more reproducible contributes to continuous research
-improvement</li>
-<li>Recent discussions of reproducibility crisis, that is many research
-studies being irreproducible, call for the need to broader awareness and
-increased skills in research reproducibility</li>
-<li>Open and reproducible research are becoming the norm around the
-world following many global changes in how academic research is
-conducted, including a broad science reform around the world</li>
-<li>Transparent, rigorous and reproducible research is an integral part
-of research integrity and responsible research conduct that researchers
-should follow</li>
+<li>Improve the quality and reliability of results</li>
+<li>Respond to concerns about irreproducible studies in many fields</li>
+<li>Support broader changes in research, including global efforts to
+make science more open</li>
+<li>Align with funder, journal, and institutional expectations for
+transparency and rigor</li>
 </ul>
-<p>To summarize, more reproducible research means: research improvement,
-mitigating reproducibility crisis, contributing to ongoing science
-reform and responsible research conduct.</p>
+<p>In short, reproducible research strengthens science, supports
+collaboration, and helps researchers meet growing expectations for
+responsible research conduct.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -449,8 +466,10 @@ in other contexts or populations that differ from the original one</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="based-on-what-we-went-through-we-can-say-that-a-study-has-been-reproduced-when" class="callout-inner">
-<h3 class="callout-title">Based on what we went through, we can say that a study has been reproduced when:</h3>
+<h3 class="callout-title">Based on what we went through, we can say that
+a study has been reproduced when:</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Researchers apply similar methods to the original study in a new
@@ -468,7 +487,7 @@ purpose</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol start="2" style="list-style-type: decimal">
 <li>Researchers re-analyze data from the original study and observe the
@@ -518,8 +537,8 @@ case, that is to mean both reproducing and replicating the study.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussion</span>
 <div class="callout-inner">
-<h3 class="callout-title">Discussion</h3>
 <div class="callout-content">
 <p>Can you provide additional examples of reproducible studies from
 various disciplines or research types?</p>
@@ -549,8 +568,8 @@ researcher(s).</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussion</span>
 <div class="callout-inner">
-<h3 class="callout-title">Discussion</h3>
 <div class="callout-content">
 <p>Discuss in pairs: Should we use the term “reproducibility” across
 different disciplines and research methodologies even though it might
@@ -616,8 +635,8 @@ crisis”</a>. However, not everyone agrees.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussion</span>
 <div class="callout-inner">
-<h3 class="callout-title">Discussion</h3>
 <div class="callout-content">
 <p>Do you agree that there is a reproducibility crisis in academic
 research?<br>
@@ -632,8 +651,8 @@ crisis”?<br></p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
 <li>Reproducibility usually means obtaining the same results with the
@@ -658,7 +677,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-repro-challenges"><p>Content from <a href="repro-challenges.html">Benefits and Challenges of Reproducibility</a></p>
 <hr>
-<p>Last updated on 2024-05-12 |
+<p>Last updated on 2026-10-01 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/repro-challenges.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -672,11 +691,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How can science benefit from more reproducible research?</li>
-<li>How can students and researchers benefit from more reproducible
-research?</li>
-<li>What are the main challenges of making research more
-reproducible?</li>
+<li>How can science benefit from reproducible research?</li>
+<li>How can researchers benefit personally from reproducibility?</li>
+<li>What are the main challenges in making research reproducible?</li>
 </ul>
 </div>
 </div>
@@ -686,122 +703,99 @@ reproducible?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>list at least 4 benefits of reproducible research</li>
-<li>link reproducible research to research integrity/ethical research
-principles (?)</li>
-<li>list at least 4 challenges of reproducible research</li>
-<li>provide one example for how researchers can be helped to overcome
-some of the challenges</li>
+<li>Identify at least four benefits of reproducible research</li>
+<li>Explain how reproducibility supports research integrity</li>
+<li>List at least four challenges researchers face</li>
+<li>Give one example of how support services can address a
+challenge</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="reproducibility-benefits-for-science">Reproducibility benefits for science<a class="anchor" aria-label="anchor" href="#reproducibility-benefits-for-science"></a>
+<section><h2 class="section-heading" id="benefits-for-science">Benefits for Science<a class="anchor" aria-label="anchor" href="#benefits-for-science"></a>
 </h2>
 <hr class="half-width">
-<p>Reproducible research is pivotal for research improvement because it
-ensures that studies are:</p>
-<ol style="list-style-type: decimal">
-<li>Easier to <strong>verify</strong>, helping to catch errors and
-mistakes.</li>
-<li>More likely to be <strong>correct</strong>, as it increases the
-likelihood of catching issues.</li>
-<li>More <strong>understandable</strong> and <strong>reusable</strong>,
-due to the proper organization and thorough documentation of the
-research process.</li>
-<li>Better prepared to <strong>share</strong> and make
-<strong>open</strong>, when privacy or copyright restrictions do not
-apply.</li>
-</ol></section><section><h2 class="section-heading" id="reproducibility-benefits-for-researchers">Reproducibility benefits for researchers<a class="anchor" aria-label="anchor" href="#reproducibility-benefits-for-researchers"></a>
+<p>Reproducibility strengthens research by making it:</p>
+<ul>
+<li>Easier to <strong>verify</strong>, helping others detect errors</li>
+<li>More likely to be <strong>accurate</strong>, since processes are
+transparent</li>
+<li>Easier to <strong>understand</strong> and <strong>reuse</strong>,
+through documentation</li>
+<li>Simpler to <strong>share</strong>, when licensing or privacy
+allow</li>
+</ul></section><section><h2 class="section-heading" id="benefits-for-researchers">Benefits for Researchers<a class="anchor" aria-label="anchor" href="#benefits-for-researchers"></a>
 </h2>
 <hr class="half-width">
-<p>But reproducibility also has particular benefits for researchers
-themselves, and not only for science more broadly. That’s because making
-studies more reproducible means that researchers:</p>
-<ol style="list-style-type: decimal">
-<li>Are more <strong>efficient</strong> (although at first implementing
-reproducible workflows might be time-consuming, it makes them more
-efficient down the road!)</li>
-<li>Are <strong>less stressed</strong> about making a mistake (because
-both they and other researchers can check if the study reproduces across
-different contexts)</li>
-<li>Can get <strong>credit</strong> for producing rigorous research
-outputs (according to new research assessment criteria that follow
-global science reform)</li>
-</ol>
+<p>Reproducibility also helps individual researchers:</p>
+<ul>
+<li>Become more <strong>efficient</strong>: while setup takes time, it
+saves time later</li>
+<li>Feel more <strong>confident</strong>, knowing their work can be
+checked and reused</li>
+<li>Gain <strong>recognition</strong>: reproducible outputs are valued
+in grant reviews and assessments</li>
+</ul>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussion</span>
 <div class="callout-inner">
-<h3 class="callout-title">Discussion</h3>
 <div class="callout-content">
-<p>Think about one way in which more reproducible research could benefit
-science and one in which it could benefit researchers themselves. Why
-are these two benefits important?</p>
+<p>Name one benefit of reproducibility for science and one for
+individual researchers. Why are these important?</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="challenges-in-making-research-more-reproducible">Challenges in making research more reproducible<a class="anchor" aria-label="anchor" href="#challenges-in-making-research-more-reproducible"></a>
+</section><section><h2 class="section-heading" id="common-challenges">Common Challenges<a class="anchor" aria-label="anchor" href="#common-challenges"></a>
 </h2>
 <hr class="half-width">
-<p>We learned that they are many benefits of making research more
-reproducible. However, this does not come without specific
-challenges:</p>
-<ol style="list-style-type: decimal">
-<li>Making research reproducible is <strong>time-consuming</strong>
-(especially at first when new workflows are being implemented or
-research documentation is created from scratch)</li>
-<li>It requires <strong>skills</strong> and <strong>expertise</strong>
-(for example, researchers might need to know how to properly organize
-and document research outputs)</li>
-<li>It is more difficult when specific <strong>restrictions</strong>
-apply (in cases when due to privacy or copyright restrictions, critical
-parts of dataset or analysis cannot be made available for independent
-reproduction by other researchers)</li>
-<li>Research might not reproduce due to <strong>technical</strong>
-issues (for example, different analysis software might differ in how
-they perform certain calculations and produce different outputs for the
-same analysis)</li>
-</ol></section><section><h2 class="section-heading" id="overcoming-challenges">Overcoming challenges<a class="anchor" aria-label="anchor" href="#overcoming-challenges"></a>
+<p>Despite the benefits, reproducibility can be hard to achieve. Some
+common obstacles:</p>
+<ul>
+<li>It takes <strong>time</strong> to adopt new workflows or improve
+documentation</li>
+<li>It requires <strong>skills</strong> in tools, formats, and
+platforms</li>
+<li>
+<strong>Legal or ethical restrictions</strong> may limit what can be
+shared</li>
+<li>
+<strong>Technical barriers</strong> can arise from software changes
+or compatibility issues</li>
+</ul></section><section><h2 class="section-heading" id="how-to-support-reproducibility">How to Support Reproducibility<a class="anchor" aria-label="anchor" href="#how-to-support-reproducibility"></a>
 </h2>
 <hr class="half-width">
-<p>These specific challenges can be overcome, but they require that
-researchers have proper conditions and support for making studies more
-reproducible:</p>
-<ol style="list-style-type: decimal">
-<li>Because making research reproducible is
-<strong>time-consuming</strong>, researchers should be
-<strong>rewarded</strong> for preparing reproducible outputs and have
-appropriate support</li>
-<li>Because it requires <strong>skills</strong> and
-<strong>expertise</strong>, institutions should offer
-<strong>training</strong> about the tools and solutions for reproducible
-research and/or trained <strong>support staff</strong>
-</li>
-<li>Because is more difficult when specific sharing
-<strong>restrictions</strong> apply, reproducibility should be checked
-by <strong>internal staff</strong> and/or proper <strong>infrastructure
-and tools</strong> with controlled access to research outputs should be
-in place</li>
-<li>Because research might not reproduce due to
-<strong>technical</strong> issues, software documentation should be
-provided and results could be checked across different types of software
-and operating systems</li>
-</ol>
+<p>These challenges can be addressed with the right support:</p>
+<ul>
+<li>
+<strong>Time</strong>: Institutions and funders can recognize
+reproducible outputs and allow time for preparation</li>
+<li>
+<strong>Skills</strong>: Training and support staff can help
+researchers learn best practices</li>
+<li>
+<strong>Restrictions</strong>: Secure platforms and internal review
+can enable controlled sharing</li>
+<li>
+<strong>Technical issues</strong>: Guidance on software
+documentation and environment capture can help others reproduce
+results</li>
+</ul>
 <div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussion</span>
 <div class="callout-inner">
-<h3 class="callout-title">Discussion</h3>
 <div class="callout-content">
-<p>Name one challenge of making research more reproducible.<br>
-Discuss with the person next to you your choice and brainstorm ways in
-which you could help researchers overcome that challenge as a
-librarian.<br></p>
+<p>Pick one challenge researchers face when making their work
+reproducible.<br>
+Talk with a partner about how you, as a librarian or support staff
+member, could help address that challenge.</p>
 </div>
 </div>
 </div>
@@ -809,18 +803,16 @@ librarian.<br></p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>Making research more reproducible contributes to general research
-improvement, quality and rigor but also to higher efficiency and easier
-error correction for researchers</li>
-<li>This does not come without specific challenges, such as time
-constraints, technical issues and the need of specific skills for making
-research outputs reproducible</li>
-<li>To overcome the challenges, researchers are in need of proper tools,
-solutions, research support staff, infrastructure and training</li>
+<li>Reproducibility improves research quality and benefits both science
+and individual researchers</li>
+<li>It can be difficult due to time, skills, legal, and technical
+challenges</li>
+<li>Support services like training, infrastructure, and guidance are key
+to helping researchers succeed</li>
 </ul>
 </div>
 </div>
@@ -831,7 +823,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-repro-tools"><p>Content from <a href="repro-tools.html">Tools for Reproducible Research Workflows</a></p>
 <hr>
-<p>Last updated on 2024-11-15 |
+<p>Last updated on 2026-10-01 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/repro-tools.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -846,9 +838,9 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>What are reproducible research workflows?</li>
-<li>Which areas of the research process can be made more
+<li>Which stages of the research process can be made more
 reproducible?</li>
-<li>What tools can improve reproducibility of research workflows?</li>
+<li>What tools can help improve reproducibility?</li>
 </ul>
 </div>
 </div>
@@ -858,133 +850,146 @@ reproducible?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>provide examples of reproducible research workflows</li>
-<li>list at least 4 different tools and practices for increasing
-research reproducibility</li>
-<li>demonstrate basic understanding of how to use selected tools for
-increasing research reproducibility</li>
+<li>Identify key stages in a research workflow</li>
+<li>List at least four tools that support reproducibility</li>
+<li>Explain how some of these tools can be used in practice</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="starting-with-reproducible-research-workflows">Starting with Reproducible Research Workflows<a class="anchor" aria-label="anchor" href="#starting-with-reproducible-research-workflows"></a>
+<section><h2 class="section-heading" id="what-is-a-reproducible-research-workflow">What is a Reproducible Research Workflow?<a class="anchor" aria-label="anchor" href="#what-is-a-reproducible-research-workflow"></a>
 </h2>
 <hr class="half-width">
-<p>When we talk about research workflows we mean the sequence of
-processes through which researchers have to go to get to specific
-research outputs such as a dataset, analysis result or a publication. We
-can distinguish three main areas in the research process where workflows
-can be made more reproducible:</p>
+<p>A research workflow is the sequence of steps a researcher takes to
+produce outputs like a dataset, an analysis, or a publication.</p>
+<p>Reproducibility can be improved in three key areas:</p>
 <ol style="list-style-type: decimal">
-<li>Data acquisition and processing</li>
-<li>Data analyses</li>
-<li>Data reports (manuscripts)</li>
+<li><strong>Data collection and processing</strong></li>
+<li><strong>Data analysis</strong></li>
+<li><strong>Writing and reporting results</strong></li>
 </ol>
 <figure><img src="fig/image2copy.png" alt="6 helpful steps for reproducible research" class="figure mx-auto d-block"><div class="figcaption">6 helpful steps for reproducible research</div>
-</figure></section><section><h2 class="section-heading" id="what-tools-are-available-out-there">What tools are available out there?<a class="anchor" aria-label="anchor" href="#what-tools-are-available-out-there"></a>
+</figure><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Using the right tools helps researchers automate tasks, track
+changes, and make their work easier to reproduce and reuse. Without
+them, even well-intentioned practices can fall short.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="tools-by-research-stage">Tools by Research Stage<a class="anchor" aria-label="anchor" href="#tools-by-research-stage"></a>
 </h2>
 <hr class="half-width">
-<p>Different tools can be used for increasing reproducibility depending
-on the specific phase of research process. Here is a list of some
-helpful tools for each of the three phases:</p>
+<p>Different tools support different parts of the workflow. Below are
+examples by stage.</p>
 <div class="section level3">
-<h3 id="data-acquisition-and-processing">Data Acquisition and Processing<a class="anchor" aria-label="anchor" href="#data-acquisition-and-processing"></a>
+<h3 id="data-collection-and-processing">1. Data Collection and Processing<a class="anchor" aria-label="anchor" href="#data-collection-and-processing"></a>
 </h3>
-<p>Documentation is a critical step in ensuring data acquisition and
-processing are transparent and reproducible. Key tools include:</p>
+<p>Good documentation makes data collection methods clear and
+reusable.</p>
 <ul>
 <li>
-<strong>README files</strong>: Provide essential metadata about
-datasets or code repositories, such as purpose, data collection methods,
-and file organization. A <a href="https://data.research.cornell.edu/content/readme" class="external-link">template</a> is
-available to guide their creation.<br>
+<strong>README files</strong> – Describe datasets and folder
+structure<br><a href="https://data.research.cornell.edu/content/readme" class="external-link">Cornell
+template</a>
 </li>
 <li>
-<strong>Codebooks</strong>: Define dataset variables, labels,
-values, and units to make data understandable and reusable.<br>
+<strong>Codebooks</strong> – Define variables, labels, and
+units<br>
 </li>
 <li>
-<strong>Electronic Lab Notebooks (ELNs)</strong>: Digital tools to
-document lab workflows, experiments, and results with features like
-timestamps and collaboration (e.g., Jupyter, LabArchives).</li>
+<strong>Electronic Lab Notebooks (ELNs)</strong> – Digital logs for
+lab work (e.g. Jupyter, LabArchives)</li>
 </ul>
 </div>
 <div class="section level3">
-<h3 id="data-analyses">Data analyses<a class="anchor" aria-label="anchor" href="#data-analyses"></a>
+<h3 id="data-analysis">2. Data Analysis<a class="anchor" aria-label="anchor" href="#data-analysis"></a>
 </h3>
-<p>In the data analysis phase of the research process, the tools for
-making analyses more reproducible will differ depending on the
-methodology used, for example depending on whether researcher applies
-quantitative or qualitative methods in the study. Here is a list of some
-helpful tools depending on research methodology:</p>
-<p>Quantitative methods:</p>
+<p>Tools vary based on the type of research (quantitative vs
+qualitative).</p>
+<div class="section level4">
+<h4 id="quantitative-analysis">Quantitative Analysis<a class="anchor" aria-label="anchor" href="#quantitative-analysis"></a>
+</h4>
 <ul>
-<li>Programming languages for track-record and transparency of all
-steps: R, Python, Syntax from SPSS</li>
-<li>Versioning: Git</li>
-<li>Code quality checking and testing: <a href="https://the-turing-way.netlify.app/reproducible-research/code-quality.html" class="external-link">https://the-turing-way.netlify.app/reproducible-research/code-quality.html</a>
+<li>
+<strong>R</strong>, <strong>Python</strong>, <strong>SPSS
+Syntax</strong> – For scripting and transparency</li>
+<li>
+<strong>Git</strong> – Version control for code and data</li>
+<li>
+<strong>Code quality tools</strong> – <a href="https://the-turing-way.netlify.app/reproducible-research/code-quality.html" class="external-link">The
+Turing Way: Code Quality</a>
 </li>
-<li>Containers for freezing computational environment: <a href="https://the-turing-way.netlify.app/reproducible-research/renv/renv-options.html" class="external-link">https://the-turing-way.netlify.app/reproducible-research/renv/renv-options.html</a>
-</li>
-<li>Code capsules: <a href="https://codeocean.com" class="external-link">https://codeocean.com</a>
-</li>
-</ul>
-<p>Qualitative methods:</p>
-<ul>
-<li>Annotations (e.g. <a href="https://help-nv11.qsrinternational.com/desktop/concepts/about_annotations.html" class="external-link">annotation
-function in NVIVO</a>, ATI: <a href="https://qdr.syr.edu/ati" class="external-link">Annotation
-for Transparent Inquiry</a>)</li>
-<li>Active citation: <a href="https://www.princeton.edu/~amoravcs/library/ps.pdf" class="external-link">https://www.princeton.edu/~amoravcs/library/ps.pdf</a>
+<li>
+<strong>Containers</strong> – Freeze environments (e.g., <a href="https://the-turing-way.netlify.app/reproducible-research/renv/renv-options.html" class="external-link">renv</a>)</li>
+<li>
+<strong>Code Ocean</strong> – Share executable code capsules: <a href="https://codeocean.com" class="external-link">https://codeocean.com</a>
 </li>
 </ul>
 </div>
-<div class="section level3">
-<h3 id="data-reports-manuscripts">Data reports (manuscripts)<a class="anchor" aria-label="anchor" href="#data-reports-manuscripts"></a>
-</h3>
-<p>Tools to create, share, and collaborate on data reports.</p>
+<div class="section level4">
+<h4 id="qualitative-analysis">Qualitative Analysis<a class="anchor" aria-label="anchor" href="#qualitative-analysis"></a>
+</h4>
 <ul>
 <li>
-<strong>R Markdown</strong>: Create reproducible reports by
-embedding code and outputs into narrative documents. Ideal for
-integrating R workflows.<br>
+<strong>Annotations</strong> – Tools like <a href="https://help-nv11.qsrinternational.com/desktop/concepts/about_annotations.html" class="external-link">NVivo</a>
+or <a href="https://qdr.syr.edu/ati" class="external-link">ATI</a>
 </li>
 <li>
-<strong>Quarto</strong>: A next-generation tool similar to R
-Markdown but with expanded support for multiple languages (e.g., Python,
-Julia, R).<br>
+<strong>Active Citation</strong> – Linking sources to analysis: <a href="https://www.princeton.edu/~amoravcs/library/ps.pdf" class="external-link">example</a>
 </li>
-<li>
-<strong>Jupyter Notebooks</strong>: Interactive documents combining
-live code, outputs, and text, popular for Python workflows.<br>
-</li>
-<li>
-<strong>HackMD</strong>: A collaborative markdown editor for
-real-time co-authoring, not inherently reproducible but useful for team
-writing.<br>
-</li>
-<li>
-<strong>Overleaf</strong>: A LaTeX-based platform for professional
-typesetting, useful for collaboration but not designed for
-reproducibility.</li>
 </ul>
-<div id="exercise" class="callout discussion">
+</div>
+</div>
+<div class="section level3">
+<h3 id="writing-and-reporting">3. Writing and Reporting<a class="anchor" aria-label="anchor" href="#writing-and-reporting"></a>
+</h3>
+<p>Tools for integrating code, results, and narrative.</p>
+<ul>
+<li>
+<strong>R Markdown</strong> – Combines R code with text</li>
+<li>
+<strong>Quarto</strong> – Supports multiple languages;
+markdown-based</li>
+<li>
+<strong>Jupyter Notebooks</strong> – Combine live Python code with
+results and narrative</li>
+<li>
+<strong>HackMD</strong> – Collaborative markdown editor for
+co-writing</li>
+<li>
+<strong>Overleaf</strong> – Online LaTeX for polished documents</li>
+</ul>
+<div id="exercises" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
+<span class="callout-header">Challenge</span>
+<div id="exercises" class="callout-inner">
+<h3 class="callout-title">Exercises</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
-<li>Take a look at the README file template that we listed in this
-lesson: <a href="https://data.research.cornell.edu/data-management/sharing/readme/" class="external-link uri">https://data.research.cornell.edu/data-management/sharing/readme/</a>
-How could you help a researcher fill out a template like that? Which
-elements could you help most with?</li>
-<li>What types of tools can be used for making qualitative analyses more
-reproducible? If you or a researcher don’t have access to these specific
-tools, could you think of other ways in which one could make qualitative
-analysis more reproducible using commonly available tools?</li>
+<li>Visit this <a href="https://data.research.cornell.edu/data-management/sharing/readme/" class="external-link">README
+template</a>.
+<ul>
+<li>How could you support a researcher in completing it?<br>
+</li>
+<li>Which sections would benefit most from library support?</li>
+</ul>
+</li>
+<li>What tools can help make qualitative research more reproducible?
+<ul>
+<li>If these tools aren’t available, what alternatives might work using
+familiar tools?</li>
+</ul>
+</li>
 </ol>
 </div>
 </div>
@@ -993,16 +998,15 @@ analysis more reproducible using commonly available tools?</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>Research workflows are sequences of processes that researchers have
-to go through to get to specific research outputs</li>
-<li>Data acquisition, data analysis and manuscript writing are three
-phases of the research process that can be made more reproducible</li>
-<li>There are many tools out there that can help make research workflows
-more reproducible</li>
+<li>Research workflows include data collection, analysis, and
+reporting</li>
+<li>Each stage offers opportunities to improve reproducibility</li>
+<li>Many tools exist to support documentation, versioning, and
+sharing</li>
 </ul>
 </div>
 </div>
@@ -1014,7 +1018,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-library-repro-role"><p>Content from <a href="library-repro-role.html">The Role of Libraries in Supporting Reproducibility</a></p>
 <hr>
-<p>Last updated on 2024-05-13 |
+<p>Last updated on 2026-10-01 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/library-repro-role.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1040,10 +1044,8 @@ reproducibility?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>demonstrate understanding of libraries’ central role in supporting
-reproducibility</li>
-<li>provide examples of how libraries can support research
-reproducibility and its improvement</li>
+<li>Describe how libraries support reproducible research</li>
+<li>Identify ways library staff can help improve research practices</li>
 </ul>
 </div>
 </div>
@@ -1053,44 +1055,41 @@ reproducibility and its improvement</li>
 <section><h2 class="section-heading" id="why-libraries">Why Libraries?<a class="anchor" aria-label="anchor" href="#why-libraries"></a>
 </h2>
 <hr class="half-width">
-<p>Academic libraries are uniquely positioned to provide support in the
-area of reproducible research. Open science is already at the core of
-many libraries’ work and many librarians provide direct and increasingly
-hands-on support to both early career and senior researchers at their
-institutions. Because reproducibility is strongly associated with open
-science/open research and because funders, journals, and other
-stakeholders begin to implement new requirements for not only open but
-also reproducible research, librarians can build on their expertise in
-helping preparing research outputs for sharing to also help make them
-reproducible.</p>
-</section><section><h2 class="section-heading" id="reproducibility-support-from-the-libraries">Reproducibility support from the libraries<a class="anchor" aria-label="anchor" href="#reproducibility-support-from-the-libraries"></a>
+<p>Libraries are well positioned to support reproducible research. Many
+already promote open access, open data, and good documentation
+practices. These skills and services align closely with reproducibility
+goals.</p>
+<p>As funders and journals begin to expect not only open but also
+reproducible research, libraries can expand their support. Librarians
+work across disciplines and with researchers at all career stages. This
+makes them key partners in promoting transparency and improving research
+workflows.</p>
+</section><section><h2 class="section-heading" id="how-libraries-support-reproducibility">How Libraries Support Reproducibility<a class="anchor" aria-label="anchor" href="#how-libraries-support-reproducibility"></a>
 </h2>
 <hr class="half-width">
-<div class="section level3">
-<h3 id="where-can-libraries-help">Where can libraries help:<a class="anchor" aria-label="anchor" href="#where-can-libraries-help"></a>
-</h3>
+<p>Libraries can help by:</p>
 <ul>
-<li>Awareness raising, teaching, training, and hands-on guidance</li>
-<li>Help researchers being transparent about their full research
-workflow: research questions, methods, data, step-by-step procedures and
-analyses; help making the methods, data and analyses open (if possible
-in a given project)</li>
-<li>Assist with making good documentation for all outputs and all stages
-of the research process</li>
-<li>Assist with version control to track of versions of all outputs</li>
-<li>Help with the quality check of the methods, data and analyses</li>
-<li>Verifying researchers’ work: helping with reproducing their own
-results</li>
+<li>Raising awareness and offering training on reproducible
+research</li>
+<li>Supporting transparent research practices, including documenting
+methods, sharing data, and explaining analysis steps</li>
+<li>Helping researchers create clear, consistent documentation for all
+stages of a project</li>
+<li>Advising on version control tools to track changes in code, data, or
+manuscripts</li>
+<li>Reviewing data and workflows to improve quality and clarity</li>
+<li>Assisting researchers in reproducing their own results</li>
 </ul>
-<div id="exercise-reflection" class="callout discussion">
+<div id="reflection" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="exercise-reflection" class="callout-inner">
-<h3 class="callout-title">Exercise (Reflection)</h3>
+<span class="callout-header">Challenge</span>
+<div id="reflection" class="callout-inner">
+<h3 class="callout-title">Reflection</h3>
 <div class="callout-content">
-<p>What do you think is the most important area where libraries can
-provide support in making research more reproducible?</p>
+<p>What is one area where you think libraries can make the biggest
+difference in supporting reproducible research?</p>
 </div>
 </div>
 </div>
@@ -1098,16 +1097,16 @@ provide support in making research more reproducible?</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>Academic libraries are uniquely positioned to provide help and
-support in the area of open and reproducible research</li>
-<li>Academic librarians can build on their expertise in making research
-outputs shareable and reusable to also help make them reproducible</li>
-<li>Academic libraries can offer training in reproducible research
-workflows in addition to open science trainings</li>
+<li>Libraries are natural partners in supporting open and reproducible
+research</li>
+<li>Librarians can help researchers improve transparency, documentation,
+and workflows</li>
+<li>Reproducibility support builds on existing library expertise in
+research data and scholarly communication</li>
 </ul>
 </div>
 </div>
@@ -1116,7 +1115,6 @@ workflows in addition to open science trainings</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </section></section>
 </div>
     </main>
@@ -1135,15 +1133,17 @@ any links that you are not going to use.
 	
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
-			</div>
-			<div class="col-md-6">
+        <p>
+        <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/" class="external-link">Cite</a>
+        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+		</div>
+		<div class="col-md-6">
 
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.10" class="external-link">sandpaper (0.16.10)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.7" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
-			</div>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.21.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.1.3)</a></p>
+		</div>
 		</footer>
 </div> <!-- / div.container -->
 	<div id="to-top">
@@ -1154,10 +1154,10 @@ any links that you are not going to use.
   <script type="application/ld+json">
     {
   "@context": "https://schema.org",
-  "@type": "TrainingMaterial",
+  "@type": "LearningResource",
   "@id": "https://LibraryCarpentry.github.io/lc-reproducible-research/aio.html",
   "inLanguage": "en",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+  "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "reproducibility, research workflows, library, open research",
   "name": "All in One View",
@@ -1165,8 +1165,8 @@ any links that you are not going to use.
   "url": "https://LibraryCarpentry.github.io/lc-reproducible-research/aio.html",
   "identifier": "https://LibraryCarpentry.github.io/lc-reproducible-research/aio.html",
   "dateCreated": "2023-08-16",
-  "dateModified": "2025-01-07",
-  "datePublished": "2025-01-07"
+  "dateModified": "2026-10-01",
+  "datePublished": "2026-10-01"
 }
 
   </script><script>
