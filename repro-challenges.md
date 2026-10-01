@@ -1,80 +1,78 @@
 ---
 title: 'Benefits and Challenges of Reproducibility'
 teaching: 10
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How can science benefit from more reproducible research?
-- How can students and researchers benefit from more reproducible research?
-- What are the main challenges of making research more reproducible?
-
+- How can science benefit from reproducible research?
+- How can researchers benefit personally from reproducibility?
+- What are the main challenges in making research reproducible?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- list at least 4 benefits of reproducible research
-- link reproducible research to research integrity/ethical research principles (?)
-- list at least 4 challenges of reproducible research
-- provide one example for how researchers can be helped to overcome some of the challenges
-
+- Identify at least four benefits of reproducible research
+- Explain how reproducibility supports research integrity
+- List at least four challenges researchers face
+- Give one example of how support services can address a challenge
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Reproducibility benefits for science
+## Benefits for Science
 
-Reproducible research is pivotal for research improvement because it ensures that studies are:
+Reproducibility strengthens research by making it:
 
-1. Easier to **verify**, helping to catch errors and mistakes.
-2. More likely to be **correct**, as it increases the likelihood of catching issues.
-3. More **understandable** and **reusable**, due to the proper organization and thorough documentation of the research process.
-4. Better prepared to **share** and make **open**, when privacy or copyright restrictions do not apply.
+- Easier to **verify**, helping others detect errors
+- More likely to be **accurate**, since processes are transparent
+- Easier to **understand** and **reuse**, through documentation
+- Simpler to **share**, when licensing or privacy allow
 
-## Reproducibility benefits for researchers
-But reproducibility also has particular benefits for researchers themselves, and not only for science more broadly. That’s because making studies more reproducible means that researchers:
+## Benefits for Researchers
 
-1. Are more **efficient** (although at first implementing reproducible workflows might be time-consuming, it makes them more efficient down the road!)
-1. Are **less stressed** about making a mistake (because both they and other researchers can check if the study reproduces across different contexts)
-1. Can get **credit** for producing rigorous research outputs (according to new research assessment criteria that follow global science reform)
+Reproducibility also helps individual researchers:
+
+- Become more **efficient**: while setup takes time, it saves time later
+- Feel more **confident**, knowing their work can be checked and reused
+- Gain **recognition**: reproducible outputs are valued in grant reviews and assessments
 
 ::: discussion
 
-Think about one way in which more reproducible research could benefit science and one in which it could benefit researchers themselves. Why are these two benefits important?
+Name one benefit of reproducibility for science and one for individual researchers. Why are these important?
 
 :::
 
-## Challenges in making research more reproducible
-We learned that they are many benefits of making research more reproducible. However, this does not come without specific challenges: 
+## Common Challenges
 
-1. Making research reproducible is **time-consuming** (especially at first when new workflows are being implemented or research documentation is created from scratch)
-1. It requires **skills** and **expertise** (for example, researchers might need to know how to properly organize and document research outputs)
-1. It is more difficult when specific **restrictions** apply (in cases when due to privacy or copyright restrictions, critical parts of dataset or analysis cannot be made available for independent reproduction by other researchers)
-1. Research might not reproduce due to **technical** issues (for example, different analysis software might differ in how they perform certain calculations and produce different outputs for the same analysis)
+Despite the benefits, reproducibility can be hard to achieve. Some common obstacles:
 
+- It takes **time** to adopt new workflows or improve documentation
+- It requires **skills** in tools, formats, and platforms
+- **Legal or ethical restrictions** may limit what can be shared
+- **Technical barriers** can arise from software changes or compatibility issues
 
-## Overcoming challenges
-These specific challenges can be overcome, but they require that researchers have proper conditions and support for making studies more reproducible: 
+## How to Support Reproducibility
 
-1. Because making research reproducible is **time-consuming**, researchers should be **rewarded** for preparing reproducible outputs and have appropriate support 
-1. Because it requires **skills** and **expertise**, institutions should offer **training** about the tools and solutions for reproducible research and/or trained **support staff**
-1. Because is more difficult when specific sharing **restrictions** apply, reproducibility should be checked by **internal staff** and/or proper **infrastructure and tools** with controlled access to research outputs should be in place
-1. Because research might not reproduce due to **technical** issues, software documentation should be provided and results could be checked across different types of software and operating systems 
+These challenges can be addressed with the right support:
+
+- **Time**: Institutions and funders can recognize reproducible outputs and allow time for preparation
+- **Skills**: Training and support staff can help researchers learn best practices
+- **Restrictions**: Secure platforms and internal review can enable controlled sharing
+- **Technical issues**: Guidance on software documentation and environment capture can help others reproduce results
 
 ::: discussion
 
-Name one challenge of making research more reproducible.\
-Discuss with the person next to you your choice and brainstorm ways in which you could help researchers overcome that challenge as a librarian.\
+Pick one challenge researchers face when making their work reproducible.  
+Talk with a partner about how you, as a librarian or support staff member, could help address that challenge.
 
 :::
 
 ::: keypoints
 
-- Making research more reproducible contributes to general research improvement, quality and rigor but also to higher efficiency and easier error correction for researchers
-- This does not come without specific challenges, such as time constraints, technical issues and the need of specific skills for making research outputs reproducible
-- To overcome the challenges, researchers are in need of proper tools, solutions, research support staff, infrastructure and training
-
+- Reproducibility improves research quality and benefits both science and individual researchers
+- It can be difficult due to time, skills, legal, and technical challenges
+- Support services like training, infrastructure, and guidance are key to helping researchers succeed
 
 :::
-
-
