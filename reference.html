@@ -214,7 +214,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="reproducible-research-overview.html">2. What is Reproducible Research?</a>
+        <a href="understanding-reproducibility.html">2. Understanding Reproducibility</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -223,7 +223,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="repro-challenges.html">3. Benefits and Challenges of Reproducibility</a>
+        <a href="making-research-checkable.html">3. Making Research Checkable</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -232,7 +232,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="repro-tools.html">4. Tools for Reproducible Research Workflows</a>
+        <a href="repro-challenges.html">4. Benefits and Challenges of Reproducibility</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -241,7 +241,16 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="library-repro-role.html">5. The Role of Libraries in Supporting Reproducibility</a>
+        <a href="repro-tools.html">5. Tools for Reproducible Research Workflows</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="library-repro-role.html">6. The Role of Libraries in Supporting Reproducibility</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -314,7 +323,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2024-05-12 |
+        <p>Last updated on 2026-10-03 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -328,21 +337,247 @@
 <section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a></h2>
 <hr class="half-width"><dl><dt>Reproducibility</dt>
 <dd>
-Obtaining the same results using the same data. Replicability
+Obtaining the same results using the same data and the same analysis
+steps.
 </dd>
+<dt>Replicability</dt>
 <dd>
-Achieving similar results with new data. Generalization
+Achieving similar results with new data.
 </dd>
+<dt>Generalization</dt>
 <dd>
-Applying results to different contexts or populations. Verification
+Applying results to different contexts or populations.
 </dd>
+<dt>Verification</dt>
 <dd>
 The process of checking that a study’s findings are accurate and free
-from errors. Research Integrity
+from errors.
 </dd>
+<dt>Research Integrity</dt>
 <dd>
 Adherence to ethical and professional principles in the conduct of
 research, which is often supported by practices like reproducibility.
+</dd>
+<dt>Open Science</dt>
+<dd>
+The practice of making research outputs (data, code, methods,
+publications) openly available and accessible so that others can
+inspect, reuse, and build on them.
+</dd>
+<dt>Reproducibility Crisis</dt>
+<dd>
+The documented finding across many research fields that a substantial
+proportion of published results cannot be reproduced or replicated by
+independent researchers. Also called the replication crisis; the framing
+itself is debated (see episode 3).
+</dd>
+<dt>Transparency</dt>
+<dd>
+Making the data, code, and decisions behind a result visible to others,
+so a reader can trace how conclusions were reached.
+</dd>
+<dt>Rigor</dt>
+<dd>
+The use of methods and reporting practices that make results reliable
+and resistant to error or bias.
+</dd>
+<dt>Responsible Research Conduct</dt>
+<dd>
+The set of ethical and professional standards governing how research is
+planned, carried out, and reported, of which reproducible practice is
+one component. Closely related to Research Integrity above, but framed
+around researcher conduct and training rather than the outcome of
+trustworthy results.
+</dd>
+<dt>Open Access</dt>
+<dd>
+Making published research outputs freely readable online without
+subscription or payment barriers.
+</dd>
+<dt>Open Data</dt>
+<dd>
+Making the data underlying a study publicly available under terms that
+permit reuse. Open data can support reproducibility, but public access
+is not required for an authorized person to rerun a documented analysis.
+</dd>
+<dt>Version Control</dt>
+<dd>
+A system that records successive changes to files over time, so that any
+earlier state can be recovered and the history of who changed what is
+preserved. Git is the most widely used version control system.
+</dd>
+<dt>Scholarly Communication</dt>
+<dd>
+The library service area covering how research is published, licensed,
+disseminated, and credited.
+</dd>
+<dt>Research Workflow</dt>
+<dd>
+The sequence of steps a researcher takes to produce an output such as a
+dataset, an analysis, or a publication.
+</dd>
+<dt>Documentation</dt>
+<dd>
+The written record of methods, data provenance, and analysis decisions
+that lets another person retrace a project.
+</dd>
+<dt>Research Data Management</dt>
+<dd>
+The institutional service area concerned with organizing, describing,
+storing, and sharing research data across a project lifecycle.
+</dd>
+<dt>Codebook</dt>
+<dd>
+A document that records, for each variable in a dataset, its name,
+meaning, permitted values, units, and coding of missing data.
+</dd>
+<dt>README File</dt>
+<dd>
+A plain-text file stored alongside a dataset or project that describes
+its contents, structure, provenance, and terms of use.
+</dd>
+<dt>Container</dt>
+<dd>
+A packaged, self-contained computing environment that bundles software
+and its dependencies so an analysis runs the same way on a different
+machine. Not the same as a lightweight dependency-management tool like
+renv.
+</dd>
+<dt>Electronic Lab Notebook (ELN)</dt>
+<dd>
+A digital replacement for a paper lab notebook, used to record
+experimental procedures, observations, and results in a searchable and
+shareable form.
+</dd>
+<dt>Markdown</dt>
+<dd>
+A lightweight plain-text formatting syntax used to write documents that
+can be converted to HTML, PDF, and other formats; the basis of R
+Markdown, Quarto, and HackMD.
+</dd>
+<dt>Robust</dt>
+<dd>
+A finding that persists when reasonable, defensible changes are made to
+the analysis approach - a different but equally valid statistical test,
+for example. Distinct from reproduced (same data, same method) and
+replicated (new data, same method).
+</dd>
+<dt>Active Citation</dt>
+<dd>
+A practice in qualitative research where a claim in a paper links
+directly to the specific passage of source material that supports it, so
+a reader can check the evidence without redoing the whole analysis.
+</dd>
+<dt>Code Capsule</dt>
+<dd>
+A bundle of code, data, and computing environment packaged together
+(e.g. via Code Ocean) so someone else can run it without recreating the
+original setup.
+</dd>
+<dt>Environment Management</dt>
+<dd>
+Recording the exact software versions and dependencies a project used so
+it can be re-run the same way later or on another machine. Tools range
+from lightweight, language-specific options like renv to full containers
+like Docker.
+</dd>
+<dt>Environment Capture</dt>
+<dd>
+Recording the specific software and versions needed to rerun an analysis
+- the general practice that environment-management tools automate.
+</dd>
+<dt>De-identified</dt>
+<dd>
+Having details removed or obscured that could reveal who a research
+participant is. De-identifying material is a step toward sharing it
+responsibly, not the same as getting explicit permission to publish it.
+</dd>
+<dt>IRB (Institutional Review Board)</dt>
+<dd>
+The committee at a research institution that reviews and approves
+research involving human participants, including how their data must be
+stored and protected.
+</dd>
+<dt>Data Management Plan</dt>
+<dd>
+A document, often required by funders, describing how a project’s data
+will be organized, stored, and shared.
+</dd>
+<dt>Reproducibility Statement</dt>
+<dd>
+A description of what someone would need in order to check or rerun a
+piece of research, including any access limits on the underlying data.
+</dd>
+<dt>Coding (qualitative)</dt>
+<dd>
+In qualitative analysis, attaching descriptive labels to passages of
+text to organize and interpret them - distinct from writing program
+code.
+</dd>
+<dt>Coding Scheme</dt>
+<dd>
+The set of labels used in qualitative coding and the agreed meaning of
+each one.
+</dd>
+<dt>Auditable</dt>
+<dd>
+Describes an analysis where another person can trace the evidence and
+reasoning behind a conclusion, whether or not they reach the same
+interpretation.
+</dd>
+<dt>SPSS Syntax</dt>
+<dd>
+A saved set of commands that repeats an analysis in the SPSS statistical
+software package.
+</dd>
+<dt>Script</dt>
+<dd>
+Saved computer instructions that can be re-run to repeat a task, such as
+a data analysis step.
+</dd>
+<dt>Dependency</dt>
+<dd>
+Additional software a project’s code needs in order to run.
+</dd>
+<dt>Package</dt>
+<dd>
+A reusable, shareable bundle of software code, such as an R or Python
+package.
+</dd>
+<dt>Lockfile</dt>
+<dd>
+A record of the exact versions of a project’s dependencies, used to
+recreate the same computing environment later.
+</dd>
+<dt>Provenance</dt>
+<dd>
+A record of where a dataset came from and how it has changed over time.
+</dd>
+<dt>Variable</dt>
+<dd>
+A recorded characteristic in a dataset, usually represented as a column.
+</dd>
+<dt>Permitted Values</dt>
+<dd>
+The set of values a variable is allowed to take, as defined in a
+codebook.
+</dd>
+<dt>LaTeX</dt>
+<dd>
+A document-preparation system commonly used for producing polished,
+technical documents, often via an online editor such as Overleaf.
+</dd>
+<dt>Computational Reproducibility</dt>
+<dd>
+Obtaining consistent results by re-running the same analysis code on the
+same input data.
+</dd>
+<dt>Process Transparency</dt>
+<dd>
+In qualitative research, documenting how material was selected, coded,
+and interpreted clearly enough that another researcher can trace and
+critically assess the reasoning, even if they reach a different
+interpretation.
 </dd>
 </dl><!--
 Place links that you need to refer to multiple times across pages here. Delete
@@ -372,8 +607,8 @@ any links that you are not going to use.
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/" class="external-link">Source</a></p>
         <p>
-        <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/" class="external-link">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        <a href="citation.html">Cite</a>
+        | <a href="mailto:team@librarycarpentry.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -402,8 +637,8 @@ any links that you are not going to use.
   "url": "https://LibraryCarpentry.github.io/lc-reproducible-research/reference.html",
   "identifier": "https://LibraryCarpentry.github.io/lc-reproducible-research/reference.html",
   "dateCreated": "2023-08-16",
-  "dateModified": "2024-05-12",
-  "datePublished": "2026-10-01"
+  "dateModified": "2026-10-03",
+  "datePublished": "2026-10-03"
 }
 
   </script><script>

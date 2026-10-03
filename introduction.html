@@ -218,7 +218,10 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#why-does-this-matter">Why does this matter?</a></li>
+        <ul><li><a href="#who-this-lesson-is-for-and-what-it-covers">Who this lesson is for, and what it covers</a></li>
+<li><a href="#why-does-this-matter">Why does this matter?</a></li>
+<li><a href="#reproducibility-and-open-science">Reproducibility and open science</a></li>
+<li><a href="#a-process-to-build-toward">A process to build toward</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -228,7 +231,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="reproducible-research-overview.html">2. What is Reproducible Research?</a>
+        <a href="understanding-reproducibility.html">2. Understanding Reproducibility</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -237,7 +240,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="repro-challenges.html">3. Benefits and Challenges of Reproducibility</a>
+        <a href="making-research-checkable.html">3. Making Research Checkable</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -246,7 +249,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="repro-tools.html">4. Tools for Reproducible Research Workflows</a>
+        <a href="repro-challenges.html">4. Benefits and Challenges of Reproducibility</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -255,7 +258,16 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="library-repro-role.html">5. The Role of Libraries in Supporting Reproducibility</a>
+        <a href="repro-tools.html">5. Tools for Reproducible Research Workflows</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="library-repro-role.html">6. The Role of Libraries in Supporting Reproducibility</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -318,7 +330,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="reproducible-research-overview.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="understanding-reproducibility.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -326,14 +338,14 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Home
         </a>
-        <a class="chapter-link float-end" href="reproducible-research-overview.html" rel="next">
-          Next: What is Reproducible Research?...
+        <a class="chapter-link float-end" href="understanding-reproducibility.html" rel="next">
+          Next: Understanding Reproducibility...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2026-10-01 |
+        <p>Last updated on 2026-10-03 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -344,13 +356,76 @@
         </div>
 
         
-<section><h2 class="section-heading" id="why-does-this-matter">Why does this matter?<a class="anchor" aria-label="anchor" href="#why-does-this-matter"></a></h2>
-<hr class="half-width"><p>Reproducibility is a key part of research integrity. When research is
+
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul><li>Why does reproducibility matter for research integrity?</li>
+<li>What does this lesson cover, and who is it for?</li>
+</ul></div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul><li>Explain why reproducibility matters to research quality and
+trust</li>
+<li>Describe how this lesson connects to broader open science
+practices</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="who-this-lesson-is-for-and-what-it-covers">Who this lesson is for, and what it covers<a class="anchor" aria-label="anchor" href="#who-this-lesson-is-for-and-what-it-covers"></a></h2>
+<hr class="half-width"><p>This lesson is written for library and research-support staff (data
+services librarians, research computing consultants, and similar roles)
+who want to help researchers make their work reproducible. No
+programming background is assumed.</p>
+<p>By the end, given a research workflow, you should be able to identify
+what someone would need to follow or check it, recommend a concrete
+improvement where that connection has a gap, and explain who could carry
+out or assess the resulting check - a researcher’s own team, an
+appropriately skilled librarian, or a partner service, depending on
+expertise and access. That’s the practical skill this lesson builds
+toward, one episode at a time - not the same thing as actually
+completing a check yourself.</p>
+<p>Over the next five episodes, you will move from concepts to practice:
+what reproducibility means and how it differs from replicability
+(episode 2), when reproducible work can still be checked even if it
+isn’t fully open, using a recurring case (episode 3), the benefits and
+challenges researchers face (episode 4), concrete tools mapped onto each
+stage of a research workflow (episode 5), and where library services fit
+into supporting all of this (episode 6).</p>
+</section><section><h2 class="section-heading" id="why-does-this-matter">Why does this matter?<a class="anchor" aria-label="anchor" href="#why-does-this-matter"></a></h2>
+<hr class="half-width"><p>Reproducibility is a key part of research integrity - meaning honest,
+careful, and accountable research practice. When research is
 reproducible, others can check your work, build on it, and reuse it with
 confidence.</p>
+<p>For example: a researcher who deposits their raw data (their
+original, unprocessed observations), analysis code (saved instructions a
+computer runs), and a README (a short file explaining a project’s
+contents and how to use it) has taken a real step toward making their
+work reproducible - though depositing those three things doesn’t
+guarantee it on its own; a missing software version or an unclear step
+can still stop someone else cold. When a colleague downloads that
+package, reruns the same script, and gets the same numbers back -
+without emailing the original researcher to ask what
+“clean_data_v3_final.csv” actually contains - that successful rerun is
+what demonstrates the work is reproducible. Depositing the materials
+makes reproduction <em>possible</em>, if they’re complete enough;
+someone actually redoing it successfully is what <em>confirms</em>
+it.</p>
 <p>Making research reproducible helps:</p>
 <ul><li>Improve the quality and reliability of results</li>
-<li>Respond to concerns about irreproducible studies in many fields</li>
+<li>Respond to concerns about irreproducible studies in many fields,
+sometimes referred to as a “reproducibility crisis” (see episode 3 for
+more on this framing)</li>
 <li>Support broader changes in research, including global efforts to
 make science more open</li>
 <li>Align with funder, journal, and institutional expectations for
@@ -358,6 +433,144 @@ transparency and rigor</li>
 </ul><p>In short, reproducible research strengthens science, supports
 collaboration, and helps researchers meet growing expectations for
 responsible research conduct.</p>
+</section><section><h2 class="section-heading" id="reproducibility-and-open-science">Reproducibility and open science<a class="anchor" aria-label="anchor" href="#reproducibility-and-open-science"></a></h2>
+<hr class="half-width"><p>Reproducibility overlaps with, but is not the same as, <strong>open
+science</strong>: the broader movement toward making research outputs
+such as data, code, methods, and publications openly available,
+alongside wider goals like broadening who can participate in research
+and access its results equitably - this lesson focuses on the
+reproducibility piece, not that whole movement. Open science is one
+route to reproducibility (it is hard to reproduce a study you cannot
+access), but the two are not interchangeable. A dataset can be posted
+publicly with no documentation or version history, which makes it open,
+but its lack of documentation does not establish that it’s reproducible.
+A research team can also make their full workflow reproducible for
+internal use while keeping the data itself restricted for privacy or
+licensing reasons, which makes it reproducible but not fully open.
+Episode 3 develops this distinction through examples.</p>
+<div id="openness-or-reproducibility-5-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="openness-or-reproducibility-5-min" class="callout-inner">
+<h3 class="callout-title">Openness or reproducibility? (~5 min)</h3>
+<div class="callout-content">
+<p>A public dataset has no instructions and no documented steps for
+redoing the analysis. A different research team’s dataset is restricted
+to approved collaborators only, but comes with a fully documented
+workflow that an authorized colleague has successfully rerun.</p>
+<p>Which of these illustrates openness? Which illustrates
+reproducibility? Explain your answer in one sentence.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>The public dataset illustrates openness - it’s accessible to anyone -
+but not reproducibility: the package alone doesn’t provide enough
+information for another analyst to reliably repeat the reported
+analysis. Public access alone doesn’t establish reproducibility. The
+restricted dataset illustrates reproducibility - a colleague
+successfully reran the documented workflow - without being open, since
+it isn’t publicly accessible. A project can have either property, both,
+or neither.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>(~3 min)</p>
+<p>Before we go further: in your own words, why might a funder or
+journal care whether a study is reproducible?</p>
+<p><strong>Possible answers</strong>: reproducibility lets funders and
+journals verify that public or grant money produced results that hold up
+under scrutiny; it protects institutional and publication reputations
+against retractions; and it lets other researchers build on the work
+with confidence instead of re-doing it from scratch.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="a-process-to-build-toward">A process to build toward<a class="anchor" aria-label="anchor" href="#a-process-to-build-toward"></a></h2>
+<hr class="half-width"><p>The diagram below previews the kind of thinking this lesson develops:
+starting from a result someone wants to check, through identifying what
+supports it, to attempting a scoped check and agreeing on a next action.
+A check doesn’t need everything documented perfectly first - a limited
+attempt is often how you discover exactly what’s missing, and even a
+blocked attempt is useful once the specific gap is named. Who attempts
+the check depends on access and expertise: an authorized researcher, an
+appropriately skilled librarian, or a partner service. We’ll return to
+this diagram at the end of the lesson.</p>
+<pre class="mermaid"><code>flowchart TD
+    accTitle: Librarian consultation flow
+    accDescr: From a result or output that needs checking, through identifying its materials, planning and attempting a scoped check, to recording the outcome and agreeing a next action - whether or not the check was blocked by a gap.
+    A["What result or output needs checking?"]
+    A --&gt; B["Identify the materials and decisions behind it"]
+    B --&gt; C["Plan a scoped check: rerun a computation, compare versions, or trace evidence to an interpretation"]
+    C --&gt; D["Attempt the check with the access and information available"]
+    D --&gt;|Blocked by a gap| E["Record the specific gap and recommend an improvement, with an owner"]
+    D --&gt;|Completed| F["Record what it showed - a match, a discrepancy, or a partial result"]
+    E --&gt; G["Agree the next action"]
+    F --&gt; G</code></pre>
+<p><em>A librarian consultation flow: identify materials, plan a scoped
+check based on what’s available, attempt it, and record what happened.
+Full traceability up front isn’t required to attempt a limited check -
+the attempt itself is often what reveals a gap. A blocked attempt is
+still productive: it names a specific gap to close, with an owner. A
+completed check can show a match, a discrepancy, or a partial result,
+not always success - and either path ends in an agreed next
+action.</em></p>
+<div id="text-equivalent-of-the-diagram-above" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="text-equivalent-of-the-diagram-above" class="callout-inner">
+<h3 class="callout-title">Text equivalent of the diagram above</h3>
+<div class="callout-content">
+<ol style="list-style-type: decimal"><li>Start: what result or output needs checking?</li>
+<li>Identify the materials and decisions that support it.</li>
+<li>Plan a scoped check - for example, rerunning a computation,
+comparing versions, or tracing evidence back to an interpretation. Full
+traceability isn’t required before attempting a limited check.</li>
+<li>Attempt the check with the access and information actually
+available.</li>
+<li>If the attempt is blocked by a gap: record exactly what’s missing
+and recommend a specific improvement, with an owner. If the attempt is
+completed: record what it showed - a match, a discrepancy, or a partial
+result. Completing a check doesn’t automatically mean it succeeded.</li>
+<li>End: agree the next action, based on what’s known so far.</li>
+</ol></div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul><li>Reproducibility is central to research integrity and helps others
+check, build on, and reuse research</li>
+<li>Reproducibility and open science overlap but are not the same thing:
+openness helps enable reproducibility but does not guarantee it</li>
+<li>This lesson moves from concepts (reproducibility vs. replicability)
+and openness, to benefits and challenges, to tools, to the library’s
+role in supporting all of it</li>
+</ul></div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -365,7 +578,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="reproducible-research-overview.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="understanding-reproducibility.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -373,8 +586,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Home
         </a>
-        <a class="chapter-link float-end" href="reproducible-research-overview.html" rel="next">
-          Next: What is Reproducible Research?...
+        <a class="chapter-link float-end" href="understanding-reproducibility.html" rel="next">
+          Next: Understanding Reproducibility...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -392,8 +605,8 @@ any links that you are not going to use.
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/" class="external-link">Source</a></p>
         <p>
-        <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/" class="external-link">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        <a href="citation.html">Cite</a>
+        | <a href="mailto:team@librarycarpentry.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -422,8 +635,8 @@ any links that you are not going to use.
   "url": "https://LibraryCarpentry.github.io/lc-reproducible-research/introduction.html",
   "identifier": "https://LibraryCarpentry.github.io/lc-reproducible-research/introduction.html",
   "dateCreated": "2023-08-16",
-  "dateModified": "2026-10-01",
-  "datePublished": "2026-10-01"
+  "dateModified": "2026-10-03",
+  "datePublished": "2026-10-03"
 }
 
   </script><script>

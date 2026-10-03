@@ -257,7 +257,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="reproducible-research-overview.html">2. What is Reproducible Research?</a>
+        <a href="understanding-reproducibility.html">2. Understanding Reproducibility</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -269,7 +269,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="repro-challenges.html">3. Benefits and Challenges of Reproducibility</a>
+        <a href="making-research-checkable.html">3. Making Research Checkable</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -281,7 +281,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="repro-tools.html">4. Tools for Reproducible Research Workflows</a>
+        <a href="repro-challenges.html">4. Benefits and Challenges of Reproducibility</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -293,7 +293,19 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="library-repro-role.html">5. The Role of Libraries in Supporting Reproducibility</a>
+        <a href="repro-tools.html">5. Tools for Reproducible Research Workflows</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="library-repro-role.html">6. The Role of Libraries in Supporting Reproducibility</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -377,20 +389,37 @@
         <h1>Key Points</h1>
         
 <section id="introduction"><h2 class="section-heading"><a href="introduction.html">Introduction</a></h2>
-<hr class="half-width"></section><section id="reproducible-research-overview"><h2 class="section-heading"><a href="reproducible-research-overview.html">What is Reproducible Research?</a></h2>
+<hr class="half-width">
+<ul>
+<li>Reproducibility is central to research integrity and helps others
+check, build on, and reuse research</li>
+<li>Reproducibility and open science overlap but are not the same thing:
+openness helps enable reproducibility but does not guarantee it</li>
+<li>This lesson moves from concepts (reproducibility vs. replicability)
+and openness, to benefits and challenges, to tools, to the library’s
+role in supporting all of it</li>
+</ul></section><section id="understanding-reproducibility"><h2 class="section-heading"><a href="understanding-reproducibility.html">Understanding Reproducibility</a></h2>
 <hr class="half-width">
 <ul>
 <li>Reproducibility usually means obtaining the same results with the
-same data.</li>
+same data and the same analysis steps.</li>
 <li>Across different disciplines and methodologies, the understanding of
 what reproducibility means can be very different.</li>
+</ul></section><section id="making-research-checkable"><h2 class="section-heading"><a href="making-research-checkable.html">Making Research Checkable</a></h2>
+<hr class="half-width">
+<ul>
 <li>Reproducible research is not the same as open research - it is
 important to share research outputs to be able to reproduce others’
 studies, but research can be made fully reproducible even if it cannot
 be made fully open.</li>
+<li>Naming a project’s materials (a script, a data file, a source
+excerpt) is not the same as documenting the connection between them and
+a specific claim - that connection is what makes a result
+checkable.</li>
 <li>Recent studies point to many issues with reproducibility across
 different disciplines, something that has been termed “reproducibility
-crisis”</li>
+crisis” (optional background, not required for this lesson’s practical
+outcomes)</li>
 </ul></section><section id="repro-challenges"><h2 class="section-heading"><a href="repro-challenges.html">Benefits and Challenges of Reproducibility</a></h2>
 <hr class="half-width">
 <ul>
@@ -403,18 +432,29 @@ to helping researchers succeed</li>
 </ul></section><section id="repro-tools"><h2 class="section-heading"><a href="repro-tools.html">Tools for Reproducible Research Workflows</a></h2>
 <hr class="half-width">
 <ul>
-<li>Research workflows include data collection, analysis, and
-reporting</li>
-<li>Each stage offers opportunities to improve reproducibility</li>
-<li>Many tools exist to support documentation, versioning, and
-sharing</li>
+<li>Research workflows include data collection, analysis, and reporting;
+each stage offers opportunities to improve reproducibility</li>
+<li>Match a tool to what you’re actually checking: can someone
+understand the materials, repeat the analysis steps, or trace the
+reported findings</li>
+<li>Use documentation (README, codebook) to explain what your data and
+steps mean, and version control (Git) to inspect and recover changes to
+your code over time</li>
+<li>A named artifact (a script, a data file) only closes a gap once it’s
+specifically connected to the claim it’s meant to support - identifying
+that missing connection is as important as knowing the tool that could
+fix it</li>
 </ul></section><section id="library-repro-role"><h2 class="section-heading"><a href="library-repro-role.html">The Role of Libraries in Supporting Reproducibility</a></h2>
 <hr class="half-width">
 <ul>
 <li>Libraries are natural partners in supporting open and reproducible
-research</li>
-<li>Librarians can help researchers improve transparency, documentation,
-and workflows</li>
+research, because much of the required support already exists as library
+services under other names</li>
+<li>Library support for reproducibility ranges from familiar entry
+points (awareness, documentation) to more specialized, technical
+services (version control, environment comparisons) - which level a
+given library offers depends on staffing and expertise, not a fixed rule
+about what librarians do or don’t do</li>
 <li>Reproducibility support builds on existing library expertise in
 research data and scholarly communication</li>
 </ul></section>
@@ -436,8 +476,8 @@ research data and scholarly communication</li>
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/" class="external-link">Source</a></p>
         <p>
-        <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/" class="external-link">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        <a href="../citation.html">Cite</a>
+        | <a href="mailto:team@librarycarpentry.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -467,8 +507,8 @@ research data and scholarly communication</li>
   "url": "https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/key-points.html",
   "identifier": "https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/key-points.html",
   "dateCreated": "2023-08-16",
-  "dateModified": "2026-10-01",
-  "datePublished": "2026-10-01"
+  "dateModified": "2026-10-03",
+  "datePublished": "2026-10-03"
 }
 
   </script><script>

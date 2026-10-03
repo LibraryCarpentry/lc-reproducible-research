@@ -256,7 +256,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="reproducible-research-overview.html">2. What is Reproducible Research?</a>
+        <a href="understanding-reproducibility.html">2. Understanding Reproducibility</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -268,7 +268,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="repro-challenges.html">3. Benefits and Challenges of Reproducibility</a>
+        <a href="making-research-checkable.html">3. Making Research Checkable</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -280,7 +280,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="repro-tools.html">4. Tools for Reproducible Research Workflows</a>
+        <a href="repro-challenges.html">4. Benefits and Challenges of Reproducibility</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -292,7 +292,19 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="library-repro-role.html">5. The Role of Libraries in Supporting Reproducibility</a>
+        <a href="repro-tools.html">5. Tools for Reproducible Research Workflows</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="library-repro-role.html">6. The Role of Libraries in Supporting Reproducibility</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -376,22 +388,90 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2026-10-01 |
+<p>Last updated on 2026-10-03 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
-<section><h2 class="section-heading" id="why-does-this-matter">Why does this matter?<a class="anchor" aria-label="anchor" href="#why-does-this-matter"></a>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Why does reproducibility matter for research integrity?</li>
+<li>What does this lesson cover, and who is it for?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain why reproducibility matters to research quality and
+trust</li>
+<li>Describe how this lesson connects to broader open science
+practices</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="who-this-lesson-is-for-and-what-it-covers">Who this lesson is for, and what it covers<a class="anchor" aria-label="anchor" href="#who-this-lesson-is-for-and-what-it-covers"></a>
 </h2>
 <hr class="half-width">
-<p>Reproducibility is a key part of research integrity. When research is
+<p>This lesson is written for library and research-support staff (data
+services librarians, research computing consultants, and similar roles)
+who want to help researchers make their work reproducible. No
+programming background is assumed.</p>
+<p>By the end, given a research workflow, you should be able to identify
+what someone would need to follow or check it, recommend a concrete
+improvement where that connection has a gap, and explain who could carry
+out or assess the resulting check - a researcher’s own team, an
+appropriately skilled librarian, or a partner service, depending on
+expertise and access. That’s the practical skill this lesson builds
+toward, one episode at a time - not the same thing as actually
+completing a check yourself.</p>
+<p>Over the next five episodes, you will move from concepts to practice:
+what reproducibility means and how it differs from replicability
+(episode 2), when reproducible work can still be checked even if it
+isn’t fully open, using a recurring case (episode 3), the benefits and
+challenges researchers face (episode 4), concrete tools mapped onto each
+stage of a research workflow (episode 5), and where library services fit
+into supporting all of this (episode 6).</p>
+</section><section><h2 class="section-heading" id="why-does-this-matter">Why does this matter?<a class="anchor" aria-label="anchor" href="#why-does-this-matter"></a>
+</h2>
+<hr class="half-width">
+<p>Reproducibility is a key part of research integrity - meaning honest,
+careful, and accountable research practice. When research is
 reproducible, others can check your work, build on it, and reuse it with
 confidence.</p>
+<p>For example: a researcher who deposits their raw data (their
+original, unprocessed observations), analysis code (saved instructions a
+computer runs), and a README (a short file explaining a project’s
+contents and how to use it) has taken a real step toward making their
+work reproducible - though depositing those three things doesn’t
+guarantee it on its own; a missing software version or an unclear step
+can still stop someone else cold. When a colleague downloads that
+package, reruns the same script, and gets the same numbers back -
+without emailing the original researcher to ask what
+“clean_data_v3_final.csv” actually contains - that successful rerun is
+what demonstrates the work is reproducible. Depositing the materials
+makes reproduction <em>possible</em>, if they’re complete enough;
+someone actually redoing it successfully is what <em>confirms</em>
+it.</p>
 <p>Making research reproducible helps:</p>
 <ul>
 <li>Improve the quality and reliability of results</li>
-<li>Respond to concerns about irreproducible studies in many fields</li>
+<li>Respond to concerns about irreproducible studies in many fields,
+sometimes referred to as a “reproducibility crisis” (see episode 3 for
+more on this framing)</li>
 <li>Support broader changes in research, including global efforts to
 make science more open</li>
 <li>Align with funder, journal, and institutional expectations for
@@ -400,15 +480,161 @@ transparency and rigor</li>
 <p>In short, reproducible research strengthens science, supports
 collaboration, and helps researchers meet growing expectations for
 responsible research conduct.</p>
+</section><section><h2 class="section-heading" id="reproducibility-and-open-science">Reproducibility and open science<a class="anchor" aria-label="anchor" href="#reproducibility-and-open-science"></a>
+</h2>
+<hr class="half-width">
+<p>Reproducibility overlaps with, but is not the same as, <strong>open
+science</strong>: the broader movement toward making research outputs
+such as data, code, methods, and publications openly available,
+alongside wider goals like broadening who can participate in research
+and access its results equitably - this lesson focuses on the
+reproducibility piece, not that whole movement. Open science is one
+route to reproducibility (it is hard to reproduce a study you cannot
+access), but the two are not interchangeable. A dataset can be posted
+publicly with no documentation or version history, which makes it open,
+but its lack of documentation does not establish that it’s reproducible.
+A research team can also make their full workflow reproducible for
+internal use while keeping the data itself restricted for privacy or
+licensing reasons, which makes it reproducible but not fully open.
+Episode 3 develops this distinction through examples.</p>
+<div id="openness-or-reproducibility-5-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="openness-or-reproducibility-5-min" class="callout-inner">
+<h3 class="callout-title">Openness or reproducibility? (~5 min)</h3>
+<div class="callout-content">
+<p>A public dataset has no instructions and no documented steps for
+redoing the analysis. A different research team’s dataset is restricted
+to approved collaborators only, but comes with a fully documented
+workflow that an authorized colleague has successfully rerun.</p>
+<p>Which of these illustrates openness? Which illustrates
+reproducibility? Explain your answer in one sentence.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>The public dataset illustrates openness - it’s accessible to anyone -
+but not reproducibility: the package alone doesn’t provide enough
+information for another analyst to reliably repeat the reported
+analysis. Public access alone doesn’t establish reproducibility. The
+restricted dataset illustrates reproducibility - a colleague
+successfully reran the documented workflow - without being open, since
+it isn’t publicly accessible. A project can have either property, both,
+or neither.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>(~3 min)</p>
+<p>Before we go further: in your own words, why might a funder or
+journal care whether a study is reproducible?</p>
+<p><strong>Possible answers</strong>: reproducibility lets funders and
+journals verify that public or grant money produced results that hold up
+under scrutiny; it protects institutional and publication reputations
+against retractions; and it lets other researchers build on the work
+with confidence instead of re-doing it from scratch.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="a-process-to-build-toward">A process to build toward<a class="anchor" aria-label="anchor" href="#a-process-to-build-toward"></a>
+</h2>
+<hr class="half-width">
+<p>The diagram below previews the kind of thinking this lesson develops:
+starting from a result someone wants to check, through identifying what
+supports it, to attempting a scoped check and agreeing on a next action.
+A check doesn’t need everything documented perfectly first - a limited
+attempt is often how you discover exactly what’s missing, and even a
+blocked attempt is useful once the specific gap is named. Who attempts
+the check depends on access and expertise: an authorized researcher, an
+appropriately skilled librarian, or a partner service. We’ll return to
+this diagram at the end of the lesson.</p>
+<pre class="mermaid"><code>flowchart TD
+    accTitle: Librarian consultation flow
+    accDescr: From a result or output that needs checking, through identifying its materials, planning and attempting a scoped check, to recording the outcome and agreeing a next action - whether or not the check was blocked by a gap.
+    A["What result or output needs checking?"]
+    A --&gt; B["Identify the materials and decisions behind it"]
+    B --&gt; C["Plan a scoped check: rerun a computation, compare versions, or trace evidence to an interpretation"]
+    C --&gt; D["Attempt the check with the access and information available"]
+    D --&gt;|Blocked by a gap| E["Record the specific gap and recommend an improvement, with an owner"]
+    D --&gt;|Completed| F["Record what it showed - a match, a discrepancy, or a partial result"]
+    E --&gt; G["Agree the next action"]
+    F --&gt; G</code></pre>
+<p><em>A librarian consultation flow: identify materials, plan a scoped
+check based on what’s available, attempt it, and record what happened.
+Full traceability up front isn’t required to attempt a limited check -
+the attempt itself is often what reveals a gap. A blocked attempt is
+still productive: it names a specific gap to close, with an owner. A
+completed check can show a match, a discrepancy, or a partial result,
+not always success - and either path ends in an agreed next
+action.</em></p>
+<div id="text-equivalent-of-the-diagram-above" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="text-equivalent-of-the-diagram-above" class="callout-inner">
+<h3 class="callout-title">Text equivalent of the diagram above</h3>
+<div class="callout-content">
+<ol style="list-style-type: decimal">
+<li>Start: what result or output needs checking?</li>
+<li>Identify the materials and decisions that support it.</li>
+<li>Plan a scoped check - for example, rerunning a computation,
+comparing versions, or tracing evidence back to an interpretation. Full
+traceability isn’t required before attempting a limited check.</li>
+<li>Attempt the check with the access and information actually
+available.</li>
+<li>If the attempt is blocked by a gap: record exactly what’s missing
+and recommend a specific improvement, with an owner. If the attempt is
+completed: record what it showed - a match, a discrepancy, or a partial
+result. Completing a check doesn’t automatically mean it succeeded.</li>
+<li>End: agree the next action, based on what’s known so far.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Reproducibility is central to research integrity and helps others
+check, build on, and reuse research</li>
+<li>Reproducibility and open science overlap but are not the same thing:
+openness helps enable reproducibility but does not guarantee it</li>
+<li>This lesson moves from concepts (reproducibility vs. replicability)
+and openness, to benefits and challenges, to tools, to the library’s
+role in supporting all of it</li>
+</ul>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-reproducible-research-overview"><p>Content from <a href="reproducible-research-overview.html">What is Reproducible Research?</a></p>
+</section></section><section id="aio-understanding-reproducibility"><p>Content from <a href="understanding-reproducibility.html">Understanding Reproducibility</a></p>
 <hr>
-<p>Last updated on 2024-05-13 |
+<p>Last updated on 2026-10-03 |
 
-        <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/reproducible-research-overview.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/understanding-reproducibility.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -421,7 +647,6 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>What do we mean by reproducibility?</li>
-<li>When is research reproducible?</li>
 <li>Does reproducibility mean different things in different
 disciplines?</li>
 </ul>
@@ -433,24 +658,27 @@ disciplines?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain what research reproducibility is</li>
-<li>Provide examples where reproducibility is not the same as open
-science (or: does not overlap with)</li>
-<li>Explain how different disciplines define reproducibility
-differently</li>
+<li>Explain what research reproducibility is, and distinguish it from
+replicability and generalization</li>
+<li>Contrast computational reproducibility with transparency of
+qualitative analysis</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
+<p>This episode asks a single question: how would you know whether a
+result can be checked, and what counts as evidence that it has been? The
+next episode applies that question to openness and a running case; here,
+we build the vocabulary.</p>
 <section><h2 class="section-heading" id="reproducibility-some-definitions">Reproducibility: Some Definitions<a class="anchor" aria-label="anchor" href="#reproducibility-some-definitions"></a>
 </h2>
 <hr class="half-width">
 <p><strong>Reproducibility</strong>: Obtaining the same results using
-the same data.</p>
+the same data and the same analysis steps.</p>
 <p><strong>Replicability</strong>: Achieving similar results with new
-data.</p>
+data, using the same analysis steps to answer the same question.</p>
 <p>Research is <strong>reproduced</strong> when results are consistent
 when following the same method and analysis steps with the same input
 data</p>
@@ -460,25 +688,35 @@ obtained its own data</p>
 <p>Research results are <strong>generalized</strong> when results apply
 in other contexts or populations that differ from the original one</p>
 <p><a href="https://www.nap.edu/catalog/25303" class="external-link">Source</a></p>
-<figure><img src="fig/epi1.png" alt="Based on: https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions.html" class="figure mx-auto d-block"><div class="figcaption">Based on: <a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions.html" class="external-link">https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions.html</a>
-</div>
-</figure><div id="based-on-what-we-went-through-we-can-say-that-a-study-has-been-reproduced-when" class="callout challenge">
+<figure><img src="fig/epi1.png" alt="A 2x2 matrix crossing whether the data is the same or different (columns) with whether the analysis is the same or different (rows). Same data and same analysis is labeled Reproduced. Different data and same analysis is labeled Replicated. Same data and different analysis is labeled Robust. Different data and different analysis is labeled Generalized." class="figure mx-auto d-block"><div class="figcaption">2x2 matrix of reproduced, replicated, robust,
+and generalized results</div>
+</figure><p><strong>Robust</strong> means a finding persists when reasonable,
+defensible changes are made to the analysis - a different but equally
+valid statistical test, for example. This matrix is a simplified
+organizing aid, not an exhaustive definition: generalization in
+particular is really about how far a finding’s applicability extends,
+not just about changing both the data and the analysis at once.</p>
+<p>Based on: <a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions.html" class="external-link">The
+Turing Way: Overview of reproducibility definitions</a></p>
+<div id="which-of-these-describes-a-reproduced-study-optional-3-min" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="based-on-what-we-went-through-we-can-say-that-a-study-has-been-reproduced-when" class="callout-inner">
-<h3 class="callout-title">Based on what we went through, we can say that
-a study has been reproduced when:</h3>
+<div id="which-of-these-describes-a-reproduced-study-optional-3-min" class="callout-inner">
+<h3 class="callout-title">Which of these describes a reproduced study?
+(optional, ~3 min)</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Researchers apply similar methods to the original study in a new
 study</li>
-<li>Researchers re-analyze data from the original study and observe the
-same results</li>
+<li>Researchers re-analyze data from the original study, using the
+original analysis steps, and observe the same results</li>
 <li>Researchers reuse data from the original study for a new
 purpose</li>
 </ol>
+<p>Explain your answer in one sentence: what specifically stayed the
+same?</p>
 </div>
 </div>
 </div>
@@ -487,11 +725,13 @@ purpose</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol start="2" style="list-style-type: decimal">
 <li>Researchers re-analyze data from the original study and observe the
-same results</li>
+same results. What stayed the same: the original data and the original
+analysis method - only the fact that someone else redid the analysis is
+new.</li>
 </ol>
 </div>
 </div>
@@ -500,39 +740,78 @@ same results</li>
 </section><section><h2 class="section-heading" id="reproducibility-some-examples">Reproducibility: Some Examples<a class="anchor" aria-label="anchor" href="#reproducibility-some-examples"></a>
 </h2>
 <hr class="half-width">
-<p>Let’s consider an example: a researcher is tossing a coin 100 times
-to check if the coin is fair. They register if they have observed heads
-or tails after each toss when the coin falls on the floor. Heads are
-registered as 0 and tails as 1. The sample size of this study is N = 100
-(since they are tossing the coin 100 times).</p>
-<pre><code>Hypothesis: The coin is fair (i.e. not biased)\
-Sample size: N = 100\
-Heads = 0\
-Tails = 1\
-Analysis method = Student t-test\</code></pre>
-<p>After all data is collected (i.e. the researcher is done with the
-tossing) they start data analysis. They run a simple statistical test in
-the SPSS program - a Student t-test - to compare the number of observed
-tails outcomes against the chance level (which is 0.5 since the coin has
-two sides, and if it’s fair, there should be a 50% chance of getting
-tails). The researcher observes that the number of tails they got is no
-different from chance - and so they found a support for their original
-hypothesis. The researcher makes the complete data table and detailed
-methods and analysis from the study available to the public.</p>
+<p>Let us consider an example: a researcher is tossing a coin 100 times
+to check how often it lands on tails. They register heads or tails after
+each toss. Heads are registered as 0 and tails as 1. The sample size of
+this study is N = 100 (since they are tossing the coin 100 times).</p>
+<pre><code>Sample size: N = 100
+Heads = 0
+Tails = 1
+Analysis method = Count of tails, divided by total tosses</code></pre>
+<p>After all data is collected, the researcher calculates the proportion
+of tails: 53 tails out of 100 tosses, or 53%. The researcher makes the
+complete data table and detailed methods available to the public.</p>
 <p>Another researcher downloads the data table and re-runs the exact
-same analysis in a different software using R programming language. They
-also observe that the number of tails is no different from chance.
-<strong>They have reproduced the study!</strong></p>
+same calculation in a different software, using the R programming
+language. They also get 53%. <strong>They have reproduced the
+study</strong> - same data, same calculation, same result.</p>
 <p>A third researcher reads about the reproduced study and decides to
-conduct a new data analysis on a different coin. They apply the exact
-same methods (i.e. they toss a coin 100 times and register the outcome
-every time the coin falls on the floor). Just as in the original study,
-they mark heads as 0 and tails as 1. They also run a Student t-test on
-the data and they observe that the number is tails is no different from
-chance. <strong>They have replicated the study!</strong></p>
+investigate the same question with the same coin. They apply the exact
+same method: toss the coin 100 more times, register heads as 0 and tails
+as 1, and calculate the proportion of tails. This time they get 49 tails
+out of 100, or 49%. <strong>This is a replication attempt</strong> - new
+data, same method, same question. Whether 49% “counts” as corroborating
+the first result is a judgment call, not an automatic yes or no;
+replication attempts do not always land on an identical number, and that
+is expected.</p>
 <p>Note, however, that in many different disciplines the word
 “reproduced” could be used in both the second and the third researcher
 case, that is to mean both reproducing and replicating the study.</p>
+<p>Matching calculations demonstrate reproducibility; they do not by
+themselves establish that the study’s methods or conclusions are
+sound.</p>
+<div id="reproduced-replicated-or-generalized-5-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="reproduced-replicated-or-generalized-5-min" class="callout-inner">
+<h3 class="callout-title">Reproduced, replicated, or generalized? (~5
+min)</h3>
+<div class="callout-content">
+<p>For each scenario below, decide whether it describes reproducing,
+replicating, or generalizing a result. For each, name what stayed the
+same and what changed.</p>
+<ol style="list-style-type: decimal">
+<li>A team re-runs a colleague’s published analysis script on the exact
+same dataset and gets the same numbers.</li>
+<li>A team collects new survey data using the same questionnaire and
+analysis method, and finds a similar pattern of responses.</li>
+<li>A team that found an effect in a lab study finds the same effect
+holds in a real-world field setting with a different population.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>Reproduced - same data, same method; nothing changed except who ran
+it.</li>
+<li>Replicated - same method and question, but new data.</li>
+<li>Generalized - the result was shown to extend to a different
+context/population, using a different setting rather than the original
+lab conditions.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -540,6 +819,7 @@ case, that is to mean both reproducing and replicating the study.</p>
 <span class="callout-header">Discussion</span>
 <div class="callout-inner">
 <div class="callout-content">
+<p>(optional, ~5 min)</p>
 <p>Can you provide additional examples of reproducible studies from
 various disciplines or research types?</p>
 </div>
@@ -548,6 +828,10 @@ various disciplines or research types?</p>
 </section><section><h2 class="section-heading" id="reproducibility-across-methodologies-and-research-disciplines">Reproducibility Across Methodologies and Research Disciplines<a class="anchor" aria-label="anchor" href="#reproducibility-across-methodologies-and-research-disciplines"></a>
 </h2>
 <hr class="half-width">
+<p><strong>Quantitative</strong> research analyzes numerical
+measurements; <strong>qualitative</strong> research analyzes meaning in
+non-numerical material such as interviews or documents;
+<strong>computational</strong> means carried out by a computer.</p>
 <div class="section level3">
 <h3 id="quantitative-studies-computational-reproducibility">Quantitative Studies: Computational Reproducibility<a class="anchor" aria-label="anchor" href="#quantitative-studies-computational-reproducibility"></a>
 </h3>
@@ -560,10 +844,14 @@ data.</p>
 <div class="section level3">
 <h3 id="qualitative-studies-process-transparency">Qualitative Studies: Process Transparency<a class="anchor" aria-label="anchor" href="#qualitative-studies-process-transparency"></a>
 </h3>
-<p>Here we mean arriving at a similar (consistent) interpretation by
-following the same analysis process. This could be obtained by following
-the step-by-step reasoning and interpretation process of the
-researcher(s).</p>
+<p>For this lesson, qualitative transparency means documenting how
+material was selected, coded, and interpreted so another researcher can
+trace and critically assess the reasoning - not that they necessarily
+arrive at the same <strong>interpretation</strong> (the researcher’s
+explanation of what the evidence means). Two researchers can trace the
+same evidence and reasonably interpret it differently; what matters is
+that the path to the interpretation is visible and can be
+scrutinized.</p>
 <div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -571,14 +859,81 @@ researcher(s).</p>
 <span class="callout-header">Discussion</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Discuss in pairs: Should we use the term “reproducibility” across
-different disciplines and research methodologies even though it might
-mean different things?</p>
+<p>(~5 min)</p>
+<p>What would you inspect to check a quantitative result, like a survey
+calculation? What would you inspect to trace a qualitative
+interpretation, like an analysis of interview transcripts? Discuss in
+pairs how these two kinds of checking differ.</p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Reproducibility usually means obtaining the same results with the
+same data and the same analysis steps.</li>
+<li>Across different disciplines and methodologies, the understanding of
+what reproducibility means can be very different.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</div>
+</section></section><section id="aio-making-research-checkable"><p>Content from <a href="making-research-checkable.html">Making Research Checkable</a></p>
+<hr>
+<p>Last updated on 2026-10-03 |
+
+        <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/making-research-checkable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Is research that is open also reproducible, and is research that is
+reproducible also open?</li>
+<li>What would you need beyond a project’s named materials - a script, a
+data file, a source excerpt - to actually check what they claim?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Distinguish reproduction, replication, and openness in a case
+involving restricted materials, and explain what evidence supports the
+distinction</li>
+<li>Given a reported result, identify what connects it to the materials
+and decisions that support it, and name a piece of missing
+information</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="reproducibility-and-open-research">Reproducibility and Open Research<a class="anchor" aria-label="anchor" href="#reproducibility-and-open-research"></a>
+</div>
+<p>The previous episode defined reproducibility. This one applies it to
+a common point of confusion: whether something being public is the same
+as it being checkable, and works through a single case to build a habit
+of asking that question.</p>
+<section><h2 class="section-heading" id="reproducibility-and-open-research">Reproducibility and Open Research<a class="anchor" aria-label="anchor" href="#reproducibility-and-open-research"></a>
 </h2>
 <hr class="half-width">
 <div class="section level3">
@@ -595,7 +950,7 @@ tools and analyses available is essential for reproducibility.</p>
 example, due to privacy or copyright restrictions on methods, data, or
 analyses, researchers might need to keep parts of the research outputs
 under controlled access (e.g. available only to other researchers and
-not publicly available). This should not prevent then, though, from
+not publicly available). This should not prevent them, though, from
 making the project fully reproducible (e.g. internally within their
 research team).</p>
 </div>
@@ -604,24 +959,233 @@ research team).</p>
 </h3>
 <p>On the other hand, it is entirely possible to practice open science
 without following reproducibility principles. Materials, data, tools and
-code can be made openly available but if they don’t have necessary
+code can be made openly available but if they do not have necessary
 documentation, instruction on how to use them, error checks, proper
 versioning and organization - they are most probably not usable, and the
 project might not be reproducible.</p>
-<figure><img src="fig/image1.png" class="figure mx-auto d-block"></figure>
+<figure><img src="fig/image1.png" alt="Venn diagram showing that open and reproducible are overlapping but distinct categories of research practice" class="figure mx-auto d-block"><div class="figcaption">Venn diagram: open and reproducible research
+overlap but are distinct</div>
+</figure>
 </div>
-</section><section><h2 class="section-heading" id="reproducibility-crisis">Reproducibility Crisis<a class="anchor" aria-label="anchor" href="#reproducibility-crisis"></a>
+</section><section><h2 class="section-heading" id="a-recurring-example-cool-access-la">A Recurring Example: Cool Access LA<a class="anchor" aria-label="anchor" href="#a-recurring-example-cool-access-la"></a>
 </h2>
 <hr class="half-width">
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Starting here, this lesson returns a few times to a short fictional
+composite case, <strong>Cool Access LA</strong>. It is inspired by real
+UCLA heat-equity research, including the Heat Lab’s <a href="https://heatlab.humspace.ucla.edu/projects/red-hot-la-mapping-energy-inequality/" class="external-link">Red
+Hot LA: Mapping Energy Inequality</a> and a UCLA study on how <a href="https://newsroom.ucla.edu/releases/cooling-centers-los-angeles-county-extreme-heat" class="external-link">Los
+Angeles County residents use cooling centers during extreme heat</a>.
+Cool Access LA is not a real UCLA project, and nothing below describes
+any real research team’s actual workflow, tools, or data. It is a
+teaching composite, built to be realistic without being real.</p>
+</div>
+</div>
+</div>
+<p><strong>Cool Access LA</strong>: Dr. Maya Torres, an urban studies
+researcher, is studying whether residents of a Los Angeles neighborhood
+can reach and use public cooling spaces, including public libraries,
+during extreme heat. Her team combines city temperature and
+facility-location data with a short household survey and a handful of
+resident interviews about barriers to using cooling centers. For this
+teaching case, the team has permission to share a de-identified survey
+dataset (identifying details that could reveal who a participant is have
+been removed) and selected, participant-approved interview excerpts.
+Full interview recordings remain restricted to protect participants.</p>
+<div id="reproduced-replicated-or-just-open-5-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="reproduced-replicated-or-just-open-5-min" class="callout-inner">
+<h3 class="callout-title">Reproduced, replicated, or just open? (~5
+min)</h3>
+<div class="callout-content">
+<ol style="list-style-type: decimal">
+<li>A second analyst reruns Dr. Torres’s original scripts on the same
+survey data and gets the same results.</li>
+<li>A team in a different city collects its own survey and interview
+data, using the same questions and the same analysis method, and finds a
+similar pattern.</li>
+<li>Dr. Torres shares her survey dataset and analysis code, but keeps
+the interview recordings restricted to protect participants.</li>
+</ol>
+<p>Which of these is reproduction? Which is replication? Does
+restricting the interview recordings stop the project from being
+reproducible?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>Reproduction - same data, same method.</li>
+<li>Replication using new data. Because the setting also changes (a
+different city), this can additionally provide evidence about
+generalizability - one matching result in a new place does not prove the
+finding holds everywhere, but it is a data point toward that.</li>
+<li>This is not reproduction or replication, it is about
+<strong>openness</strong>. The survey analysis can be reproduced if the
+documented workflow runs successfully for someone else - that is a
+reproducibility question. Whether the interview recordings are public is
+a separate, openness question. An authorized reviewer could still trace
+the interview analysis using Dr. Torres’s coding records and decision
+notes, even without the recordings becoming public. Restricting some
+material does not automatically make the rest of the project
+unreproducible.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="the-cool-access-la-project-packet">The Cool Access LA project packet<a class="anchor" aria-label="anchor" href="#the-cool-access-la-project-packet"></a>
+</h2>
+<hr class="half-width">
+<p>The rest of this lesson refers back to a small, fictional packet from
+Dr. Torres’s project (invented teaching material, not a real
+dataset):</p>
+<ul>
+<li><p><code>survey.csv</code> - household survey responses. One
+codebook entry:
+<code>q1a = days in the past 7 days when the respondent could not reach a cooling space; allowed values 0-7; 99 = no answer</code></p></li>
+<li><p><code>analysis.R</code> - a script that is said to produce
+<strong>Figure 2: Days without cooling access, by neighborhood</strong>
+in the team’s draft report, using <code>survey.csv</code></p></li>
+<li>
+<p>One interview claim in the draft report: “Several residents
+described walking to the library specifically to use air conditioning.”
+One supporting excerpt is on file:</p>
+<blockquote>
+<p><strong>Excerpt <code>INT-07</code></strong> (approved for release):
+“It gets so hot in my apartment I can’t stay there in the afternoon, so
+I walk to the library - it’s air conditioned and it’s close enough to
+walk.”</p>
+<p><strong>Analytic note</strong>: Coded <em>access barrier (home
+cooling)</em> - the participant describes home conditions as unlivable
+and names the library specifically for its air conditioning, not as a
+general destination.</p>
+</blockquote>
+<p>(This excerpt and note are invented teaching material, not a real
+interview.)</p>
+</li>
+</ul>
+<div id="what-connects-to-what-5-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="what-connects-to-what-5-min" class="callout-inner">
+<h3 class="callout-title">What connects to what? (~5 min)</h3>
+<div class="callout-content">
+<p>Having the file names above is not the same as being able to check
+what they claim. Answer both:</p>
+<ol style="list-style-type: decimal">
+<li>What would someone need, beyond what’s listed, to reproduce Figure 2
+exactly?</li>
+<li>The report claim says “several residents” walked to the library for
+air conditioning, but the packet only shows evidence - one excerpt and
+its analytic note - for a single participant. What’s missing before that
+plural claim is supported? Name what you’d ask for, and what having it
+would let someone check.</li>
+</ol>
+<p>Do not invent an answer (a specific software version, a specific file
+version, additional excerpts that aren’t shown) - name what you would
+ask for instead.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>Which exact version of <code>survey.csv</code>
+<code>analysis.R</code> was run against (the file may have been edited
+since the figure was made), and what software/package versions
+<code>analysis.R</code> needs to run. Having the script and the data
+file named isn’t sufficient by itself - the connection between “this
+script, run on this version of this file, with this software” is what
+actually has to be documented before someone can reproduce the
+figure.</li>
+<li>At minimum, excerpts and analytic notes for the other residents the
+claim describes - one coded excerpt supports a claim about one
+participant, not “several.” Two acceptable directions: ask for more
+excerpts showing the same pattern (to check whether “several” holds up),
+or ask that the claim be narrowed to match the one piece of evidence
+shown (“one resident described…”). A coding scheme - the rules for what
+counts as an “access barrier” - is necessary but not sufficient here: it
+tells you the criteria, but checking whether a <em>plural</em> claim
+holds also requires seeing the individual excerpts and applied codes
+across enough of the interviews, not just confirming the scheme itself
+is well-defined. (Whether multiple examples are required at all depends
+on the qualitative approach in use - some traditions treat one
+richly-analyzed case as sufficient evidence for a claim about that case,
+without claiming it generalizes. The gap here is specifically that the
+evidence shown doesn’t match the claim’s plural scope, not a universal
+rule that every qualitative claim needs several examples.)</li>
+</ol>
+<p>Both answers point at the same kind of gap: a named artifact (a
+script, an excerpt) is not yet a documented <em>connection</em> between
+that artifact and the claim it supports. That gap - not the artifact’s
+mere existence - is usually what a librarian can help close.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="looking-ahead">Looking ahead<a class="anchor" aria-label="anchor" href="#looking-ahead"></a>
+</h2>
+<hr class="half-width">
+<p>Before judging whether a result can be checked, you first need to
+know what would count as evidence. Carry this question into the next
+episode: <strong>what would you ask a researcher for, before you could
+judge whether their work can be checked?</strong> The Benefits and
+Challenges episode picks up exactly that question, from the researcher’s
+side of the conversation.</p>
+<div id="optional-the-reproducibility-crisis-debate-10-min-if-discussed" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="optional-the-reproducibility-crisis-debate-10-min-if-discussed" class="callout-inner">
+<h3 class="callout-title">Optional: the “reproducibility crisis” debate
+(~10 min if discussed)</h3>
+<div class="callout-content">
+<p>The rest of this episode is background context, not required for the
+lesson’s practical outcomes above. Use it if you have time and the group
+is interested; skip it otherwise.</p>
 <p>Problems with reproducibility of research have been noticed by many
 researchers, advisors and policy makers in the past several years and
 led to some even claim that there is a <a href="https://www.nature.com/articles/533452a" class="external-link">“Reproducibility
-crisis”</a>. However, not everyone agrees.</p>
-<p><a href="https://www.pnas.org/doi/full/10.1073/pnas.1708272114" class="external-link">https://www.pnas.org/doi/full/10.1073/pnas.1708272114</a>
-<a href="https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-05942-3" class="external-link">https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-05942-3</a></p>
-<div class="section level3">
-<h3 id="reasons-for-irreproducibility">Reasons for Irreproducibility<a class="anchor" aria-label="anchor" href="#reasons-for-irreproducibility"></a>
-</h3>
+crisis”</a>. However, not everyone agrees the “crisis” framing is the
+right one. Two examples that push back on it, from different angles:</p>
+<ul>
+<li>
+<a href="https://www.pnas.org/doi/full/10.1073/pnas.1708272114" class="external-link">Is
+science really facing a reproducibility crisis, and do we need it
+to?</a> (Fanelli, 2018) - questions whether the evidence supports
+“crisis” as an accurate description of the problem</li>
+<li>
+<a href="https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-022-05942-3" class="external-link">The
+reproducibility debate is an opportunity, not a crisis</a> (Munafò et
+al., 2022) - argues the current attention on reproducibility is better
+framed as a chance to improve research practice than as a crisis to be
+alarmed about</li>
+</ul>
+<p><strong>Reasons for Irreproducibility</strong></p>
 <ul>
 <li>Unavailability of materials, data and/or analyses</li>
 <li>Poor data management</li>
@@ -631,19 +1195,22 @@ crisis”</a>. However, not everyone agrees.</p>
 <li>Lack of quality checking procedures</li>
 <li>Insufficient peer review</li>
 </ul>
-<div id="discussion3" class="callout discussion">
+</div>
+</div>
+</div>
+<div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Do you agree that there is a reproducibility crisis in academic
-research?<br>
-How many studies would have to reproduce successfully for the “crisis”
-to be over?<br>
-What could librarians do to help researchers fight the “reproducibility
-crisis”?<br></p>
+<p>(optional, ~10 min)</p>
+<p>Do you agree that “crisis” is the right framing, based on the two
+perspectives above? What evidence would help you judge how big the
+problem actually is? Looking at the list of reasons for
+irreproducibility above, which one do you think a library service is
+best positioned to address?</p>
 </div>
 </div>
 </div>
@@ -655,17 +1222,18 @@ crisis”?<br></p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Reproducibility usually means obtaining the same results with the
-same data.</li>
-<li>Across different disciplines and methodologies, the understanding of
-what reproducibility means can be very different.</li>
 <li>Reproducible research is not the same as open research - it is
 important to share research outputs to be able to reproduce others’
 studies, but research can be made fully reproducible even if it cannot
 be made fully open.</li>
+<li>Naming a project’s materials (a script, a data file, a source
+excerpt) is not the same as documenting the connection between them and
+a specific claim - that connection is what makes a result
+checkable.</li>
 <li>Recent studies point to many issues with reproducibility across
 different disciplines, something that has been termed “reproducibility
-crisis”</li>
+crisis” (optional background, not required for this lesson’s practical
+outcomes)</li>
 </ul>
 </div>
 </div>
@@ -674,10 +1242,9 @@ crisis”</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </section></section><section id="aio-repro-challenges"><p>Content from <a href="repro-challenges.html">Benefits and Challenges of Reproducibility</a></p>
 <hr>
-<p>Last updated on 2026-10-01 |
+<p>Last updated on 2026-10-03 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/repro-challenges.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -714,6 +1281,13 @@ challenge</li>
 </div>
 </div>
 </div>
+<p>The previous episode ended with a question: what would you ask a
+researcher for, before you could judge whether their work can be
+checked? Often, the honest answer is that the researcher hasn’t been
+able to provide it yet - not from unwillingness, but because
+reproducibility takes real time, skill, and sometimes runs into legal or
+ethical limits. This episode looks at why, and what a librarian can
+realistically do about it.</p>
 <section><h2 class="section-heading" id="benefits-for-science">Benefits for Science<a class="anchor" aria-label="anchor" href="#benefits-for-science"></a>
 </h2>
 <hr class="half-width">
@@ -745,8 +1319,12 @@ in grant reviews and assessments</li>
 <span class="callout-header">Discussion</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Name one benefit of reproducibility for science and one for
-individual researchers. Why are these important?</p>
+<p>(~5 min)</p>
+<p>As a group, name four benefits of reproducibility total - at least
+one for science and one for individual researchers. Then pick one and
+explain specifically how it helps someone detect an error or scrutinize
+a claim (that’s the research-integrity connection, not just
+convenience).</p>
 </div>
 </div>
 </div>
@@ -782,9 +1360,29 @@ researchers learn best practices</li>
 can enable controlled sharing</li>
 <li>
 <strong>Technical issues</strong>: Guidance on software
-documentation and environment capture can help others reproduce
+documentation and environment capture (recording the software and
+versions needed to rerun an analysis) can help others reproduce
 results</li>
 </ul>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p><strong>Back to Cool Access LA</strong> (introduced in the previous
+episode): a new research assistant is joining Dr. Torres’s team and
+needs to pick up the project from the documentation alone - the README,
+codebook, and analysis scripts have to carry knowledge that would
+otherwise live only in Dr. Torres’s head, and that takes time and skill
+to write well. Separately, the team’s interview recordings stay in a
+secure system under the study’s Institutional Review Board (IRB)
+protocol - a legal/ethical restriction, not a technical one, and one
+factor among several rather than the project’s only obstacle.</p>
+</div>
+</div>
+</div>
 <div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -792,10 +1390,13 @@ results</li>
 <span class="callout-header">Discussion</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Pick one challenge researchers face when making their work
-reproducible.<br>
-Talk with a partner about how you, as a librarian or support staff
-member, could help address that challenge.</p>
+<p>(~5 min)</p>
+<p>First, as a group, list four challenges researchers face in making
+work reproducible (use the list above or your own experience). Then pick
+one - the documentation handoff to a new team member, Dr. Torres’s
+interview-recording restriction, or one of your own - and with a
+partner, name one feasible next action that addresses it and who would
+take it.</p>
 </div>
 </div>
 </div>
@@ -823,7 +1424,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-repro-tools"><p>Content from <a href="repro-tools.html">Tools for Reproducible Research Workflows</a></p>
 <hr>
-<p>Last updated on 2026-10-01 |
+<p>Last updated on 2026-10-03 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/repro-tools.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -851,8 +1452,11 @@ reproducible?</li>
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Identify key stages in a research workflow</li>
-<li>List at least four tools that support reproducibility</li>
-<li>Explain how some of these tools can be used in practice</li>
+<li>Given a workflow gap, identify a practice or artifact that would
+address it, and describe what a check based on it would show - or would
+still leave open</li>
+<li>Describe, for a documentation tool and a version-control tool, one
+specific task it would be used for in a research project</li>
 </ul>
 </div>
 </div>
@@ -870,7 +1474,11 @@ produce outputs like a dataset, an analysis, or a publication.</p>
 <li><strong>Data analysis</strong></li>
 <li><strong>Writing and reporting results</strong></li>
 </ol>
-<figure><img src="fig/image2copy.png" alt="6 helpful steps for reproducible research" class="figure mx-auto d-block"><div class="figcaption">6 helpful steps for reproducible research</div>
+<p>The illustration below lists six concrete practices that cut across
+those three stages, from organizing files at the start of a project
+through automating the final computations:</p>
+<figure><img src="fig/image2copy.png" alt="Illustration titled Reproducible Research: 6 helpful steps, showing six numbered practices: 1. get your files and folders in order, 2. use good names for files, folders, and functions, 3. document with care using README files, metadata, and code comments, 4. version control code and text, 5. stabilize the computing environment and software, 6. automate computations. Credit: Heidi Seibold, CC-BY 4.0." class="figure mx-auto d-block"><div class="figcaption">Illustration: Reproducible Research, 6 helpful
+steps. Credit: Heidi Seibold, CC-BY 4.0.</div>
 </figure><div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -879,118 +1487,433 @@ produce outputs like a dataset, an analysis, or a publication.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <p>Using the right tools helps researchers automate tasks, track
-changes, and make their work easier to reproduce and reuse. Without
-them, even well-intentioned practices can fall short.</p>
+changes, and make their work easier to reproduce and reuse. Tools alone
+will not fix an undocumented, disorganized project, but without them,
+even well-intentioned practices are hard to sustain over the life of a
+project.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="tools-by-research-stage">Tools by Research Stage<a class="anchor" aria-label="anchor" href="#tools-by-research-stage"></a>
-</h2>
-<hr class="half-width">
-<p>Different tools support different parts of the workflow. Below are
-examples by stage.</p>
-<div class="section level3">
-<h3 id="data-collection-and-processing">1. Data Collection and Processing<a class="anchor" aria-label="anchor" href="#data-collection-and-processing"></a>
-</h3>
-<p>Good documentation makes data collection methods clear and
-reusable.</p>
-<ul>
-<li>
-<strong>README files</strong> – Describe datasets and folder
-structure<br><a href="https://data.research.cornell.edu/content/readme" class="external-link">Cornell
-template</a>
-</li>
-<li>
-<strong>Codebooks</strong> – Define variables, labels, and
-units<br>
-</li>
-<li>
-<strong>Electronic Lab Notebooks (ELNs)</strong> – Digital logs for
-lab work (e.g. Jupyter, LabArchives)</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="data-analysis">2. Data Analysis<a class="anchor" aria-label="anchor" href="#data-analysis"></a>
-</h3>
-<p>Tools vary based on the type of research (quantitative vs
-qualitative).</p>
-<div class="section level4">
-<h4 id="quantitative-analysis">Quantitative Analysis<a class="anchor" aria-label="anchor" href="#quantitative-analysis"></a>
-</h4>
-<ul>
-<li>
-<strong>R</strong>, <strong>Python</strong>, <strong>SPSS
-Syntax</strong> – For scripting and transparency</li>
-<li>
-<strong>Git</strong> – Version control for code and data</li>
-<li>
-<strong>Code quality tools</strong> – <a href="https://the-turing-way.netlify.app/reproducible-research/code-quality.html" class="external-link">The
-Turing Way: Code Quality</a>
-</li>
-<li>
-<strong>Containers</strong> – Freeze environments (e.g., <a href="https://the-turing-way.netlify.app/reproducible-research/renv/renv-options.html" class="external-link">renv</a>)</li>
-<li>
-<strong>Code Ocean</strong> – Share executable code capsules: <a href="https://codeocean.com" class="external-link">https://codeocean.com</a>
-</li>
-</ul>
-</div>
-<div class="section level4">
-<h4 id="qualitative-analysis">Qualitative Analysis<a class="anchor" aria-label="anchor" href="#qualitative-analysis"></a>
-</h4>
-<ul>
-<li>
-<strong>Annotations</strong> – Tools like <a href="https://help-nv11.qsrinternational.com/desktop/concepts/about_annotations.html" class="external-link">NVivo</a>
-or <a href="https://qdr.syr.edu/ati" class="external-link">ATI</a>
-</li>
-<li>
-<strong>Active Citation</strong> – Linking sources to analysis: <a href="https://www.princeton.edu/~amoravcs/library/ps.pdf" class="external-link">example</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="section level3">
-<h3 id="writing-and-reporting">3. Writing and Reporting<a class="anchor" aria-label="anchor" href="#writing-and-reporting"></a>
-</h3>
-<p>Tools for integrating code, results, and narrative.</p>
-<ul>
-<li>
-<strong>R Markdown</strong> – Combines R code with text</li>
-<li>
-<strong>Quarto</strong> – Supports multiple languages;
-markdown-based</li>
-<li>
-<strong>Jupyter Notebooks</strong> – Combine live Python code with
-results and narrative</li>
-<li>
-<strong>HackMD</strong> – Collaborative markdown editor for
-co-writing</li>
-<li>
-<strong>Overleaf</strong> – Online LaTeX for polished documents</li>
-</ul>
-<div id="exercises" class="callout challenge">
+<div id="sort-the-stages-3-min" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="exercises" class="callout-inner">
-<h3 class="callout-title">Exercises</h3>
+<div id="sort-the-stages-3-min" class="callout-inner">
+<h3 class="callout-title">Sort the stages (~3 min)</h3>
 <div class="callout-content">
+<p>Before reading further, try sorting these tasks into the three
+workflow stages above (data collection and processing / data analysis /
+writing and reporting): describing what each survey column means,
+calculating a result from the data, writing up the findings, and keeping
+a record of changes to a script.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul>
+<li>
+<strong>Data collection and processing</strong>: describing what
+each survey column means (this is what a codebook does)</li>
+<li>
+<strong>Data analysis</strong>: calculating a result, keeping a
+record of changes to a script (version control is most often introduced
+once code exists to track, so it spans analysis and reporting)</li>
+<li>
+<strong>Writing and reporting results</strong>: writing up the
+findings</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p>The tools below are grouped by three questions you’ll ask in almost
+every consultation, rather than by workflow stage alone: can someone
+<strong>understand the materials</strong>, can someone <strong>repeat
+the analysis steps</strong>, and can someone <strong>trace the reported
+findings</strong>? These roughly track data collection, analysis, and
+reporting, but the questions matter more than the labels - they’re what
+you’re actually checking for, in any order the conversation happens to
+go.</p>
+</section><section><h2 class="section-heading" id="can-someone-understand-the-materials">Can Someone Understand the Materials?<a class="anchor" aria-label="anchor" href="#can-someone-understand-the-materials"></a>
+</h2>
+<hr class="half-width">
+<p>Good documentation makes data collection methods clear and reusable,
+so someone else can navigate a project without asking you.</p>
+<ul>
+<li>
+<strong>README files</strong> – A plain-text file stored alongside a
+dataset or project that describes its contents, structure, provenance,
+and terms of use: <a href="https://data.research.cornell.edu/data-management/sharing/readme/" class="external-link">Cornell
+template</a>
+</li>
+<li>
+<strong>Codebooks</strong> – A document that records, for each
+variable in a dataset, its name, meaning, permitted values, units, and
+how missing data is coded</li>
+<li>
+<strong>Electronic Lab Notebooks (ELNs)</strong> – A digital
+replacement for a paper lab notebook, used to record experimental
+procedures, observations, and results in a searchable, shareable form
+(e.g. Jupyter as a notebook interface, or a dedicated ELN platform like
+LabArchives)</li>
+</ul>
+<p><strong>Cool Access LA</strong>: recall the project packet from <a href="making-research-checkable.html">Making Research Checkable</a>. A
+<strong>README and codebook</strong> explain what each survey column
+means and note which files (the interview recordings) are restricted and
+why. The codebook entry from that packet:
+<code>q1a = days in the past 7 days when the respondent could not reach a cooling space; allowed values 0-7; 99 = no answer</code>.
+(This is invented teaching data, not a real survey.)</p>
+<div id="what-would-go-wrong-here-2-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="what-would-go-wrong-here-2-min" class="callout-inner">
+<h3 class="callout-title">What would go wrong here? (~2 min)</h3>
+<div class="callout-content">
+<p>Looking at the codebook entry above (<code>99 = no answer</code>),
+what would happen if someone analyzing this data treated <code>99</code>
+as if it were a real count of days, rather than a missing-data code?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>It would badly distort any calculation involving that column -
+averages, totals, or comparisons would be skewed upward by treating “no
+answer” as “99 days,” which isn’t a real possible value (there are only
+7 days in a week). This is exactly the kind of error a codebook
+prevents: without it, a second analyst has no way to know 99 is a
+special code rather than real data.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="what-would-you-ask-for---and-what-would-you-do-next-6-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="what-would-you-ask-for---and-what-would-you-do-next-6-min" class="callout-inner">
+<h3 class="callout-title">What would you ask for - and what would you do
+next? (~6 min)</h3>
+<div class="callout-content">
+<p>Dr. Torres’s research assistant hands off this note along with the
+project folder (this is invented teaching material, not a real
+project):</p>
+<blockquote>
+<p>Cool Access LA survey analysis. Use <code>survey.csv</code> and
+<code>analysis.R</code> to make the chart in the report. Run it in R.
+Interview recordings are restricted; approved excerpts are included
+separately.</p>
+</blockquote>
+<p>With a partner:</p>
 <ol style="list-style-type: decimal">
-<li>Visit this <a href="https://data.research.cornell.edu/data-management/sharing/readme/" class="external-link">README
-template</a>.
-<ul>
-<li>How could you support a researcher in completing it?<br>
-</li>
-<li>Which sections would benefit most from library support?</li>
-</ul>
-</li>
-<li>What tools can help make qualitative research more reproducible?
-<ul>
-<li>If these tools aren’t available, what alternatives might work using
-familiar tools?</li>
-</ul>
-</li>
+<li>Identify one missing connection between this note and the packet
+from <a href="making-research-checkable.html">Making Research
+Checkable</a> - the same kind of gap the “What connects to what?”
+question there asked about.</li>
+<li>Propose one specific improvement that would close it. If you don’t
+know a fact (like an exact software version), write an explicit
+placeholder for it (“record the R and package versions used here”)
+rather than inventing one.</li>
+<li>Explain what check that improvement would then make possible.</li>
 </ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>Missing connection: the note doesn’t say which version of
+<code>survey.csv</code> produced the chart, or what software/package
+versions <code>analysis.R</code> needs. (No codebook is mentioned
+either, but that’s covered separately above.)</li>
+<li>Improvement: add a line to the project’s README naming the exact
+<code>survey.csv</code> version used (e.g. a dated filename or a Git
+commit reference) and the R and package versions <code>analysis.R</code>
+requires.</li>
+<li>What it enables: with that recorded, a second analyst could rerun
+<code>analysis.R</code> against the named data version, in a matching
+environment, and compare the result to the report’s figure - a
+reproducibility check that the hand-off note alone doesn’t currently
+support. If the interview excerpts matter to the request, the documented
+access route is the thing to ask for, not the restricted recordings
+themselves.</li>
+</ol>
+<p><strong>Anticipated misconception</strong> (not yet observed in
+teaching): learners may suggest asking for the restricted interview
+recordings directly. Redirect to the documented access route - the
+reproducibility question here is about the survey analysis; the
+interview restriction is a separate openness boundary to recognize, not
+work around.</p>
+<p>The <a href="https://data.research.cornell.edu/data-management/sharing/readme/" class="external-link">README
+template</a> above is a useful reference for what a complete version of
+this README would look like once written down.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="can-someone-repeat-the-analysis-steps">Can Someone Repeat the Analysis Steps?<a class="anchor" aria-label="anchor" href="#can-someone-repeat-the-analysis-steps"></a>
+</h2>
+<hr class="half-width">
+<p>Tools vary based on the type of research (quantitative vs
+qualitative). This section covers the quantitative tools; the next
+covers qualitative coding and annotation, plus the reporting tools both
+kinds of work eventually pass through.</p>
+<ul>
+<li>
+<strong>R</strong>, <strong>Python</strong> – Programming languages
+commonly used for data analysis; both let you save your analysis as a
+<strong>script</strong> (saved computer instructions that can be re-run
+to repeat a task), so the steps are transparent and repeatable</li>
+<li>
+<strong>SPSS Syntax</strong> – A saved set of commands that repeats
+an analysis in the SPSS statistical software package, playing the same
+transparency role as an R or Python script</li>
+<li>
+<strong>Git</strong> – A version control system that records
+successive changes to code, text, or data files over time, so any
+earlier state can be recovered and the history of who changed what is
+preserved</li>
+<li>
+<strong>Code quality tools</strong> – Tools and practices for
+checking that a calculation behaves as expected, e.g. through automated
+tests: <a href="https://the-turing-way.netlify.app/reproducible-research/code-quality.html" class="external-link">The
+Turing Way: Code Quality</a>
+</li>
+<li>
+<strong>Environment management</strong> – Tools that record the
+exact software versions and <strong>dependencies</strong> (additional
+software a project’s code needs to run) a project used, so it can be
+re-run the same way later or on another machine. This is often done with
+lightweight, language-specific tools such as <a href="https://the-turing-way.netlify.app/reproducible-research/renv/renv-options.html" class="external-link">renv</a>
+for R, which records and helps restore the exact versions of R
+<strong>packages</strong> (reusable, shareable bundles of software code)
+a project used - or with full containers (e.g. Docker) that package the
+entire operating environment. renv is not itself a container; it
+produces something closer to a <strong>lockfile</strong> (a record of
+the exact dependency versions needed to recreate an environment
+later).</li>
+<li>
+<strong>Code Ocean</strong> – Share “code capsules” (a code capsule
+bundles your code, data, and computing environment together so someone
+else can run it without recreating your setup): <a href="https://codeocean.com" class="external-link">https://codeocean.com</a>
+</li>
+</ul>
+<p><strong>Cool Access LA</strong>: <strong>Git</strong> tracks changes
+to the analysis scripts as the team revises them, so an earlier version
+can always be recovered. <strong>Environment management</strong> (renv)
+records the exact R package versions used, helping the team recreate the
+same computing environment for a later rerun.</p>
+<div id="a-version-control-scenario-4-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="a-version-control-scenario-4-min" class="callout-inner">
+<h3 class="callout-title">A version-control scenario (~4 min)</h3>
+<div class="callout-content">
+<p>The team already uses Git and committed yesterday’s working script.
+Today, Dr. Torres’s research assistant edited the analysis script and
+the resulting figure changed; the input data and software environment
+are unchanged. A collaborator asks what changed and whether yesterday’s
+figure can be recovered. Which tool from this episode would you reach
+for, and what would you do with it?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<p>Git. You would compare the current version of the script against
+yesterday’s version to see exactly what changed, and you could recover
+the earlier version of the script (and re-generate the earlier figure)
+if needed. This doesn’t tell you which figure is scientifically correct
+- only documentation and re-analysis can establish that - but it does
+let you inspect and recover the change itself.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="can-someone-trace-the-reported-findings">Can Someone Trace the Reported Findings?<a class="anchor" aria-label="anchor" href="#can-someone-trace-the-reported-findings"></a>
+</h2>
+<hr class="half-width">
+<p>Whatever the method, tracing a finding means seeing how it connects
+to its evidence. For a computational result, that check often means
+rerunning a calculation. For a qualitative interpretation, it usually
+means tracing evidence and reasoning back to source material. Many
+projects need both at once - Cool Access LA’s report has a quantitative
+figure and a qualitative claim side by side, each needing its own kind
+of check, and a project with computational steps in its qualitative
+workflow (like the coding software below) can need a rerun-style check
+there too.</p>
+<ul>
+<li>
+<strong>Coding and annotation</strong> – Free, open-source
+qualitative analysis software such as <strong>QualCoder</strong> or
+<strong>Taguette</strong>, used for <strong>coding</strong> qualitative
+source material: attaching descriptive labels (a <strong>coding
+scheme</strong>) to passages of text to organize and interpret them -
+distinct from writing program code. The software itself doesn’t make an
+analysis <strong>auditable</strong>; what does is keeping the coded
+excerpts, the applied labels, and the analytic notes explaining each
+decision together and reviewable - the tool just makes that easier to do
+consistently than a scattered set of documents would. Both tools have
+their own dedicated Library Carpentry lessons if you want to go deeper:
+<a href="https://librarycarpentry.github.io/lc-qualitative-qualcoder/" class="external-link">Open
+Qualitative Research with QualCoder</a> and <a href="https://ucla-imls-open-sci.info/lessons/open-qualitative-research-taguette/" class="external-link">Open
+Qualitative Research with Taguette</a>
+</li>
+<li>
+<strong>Active Citation</strong> – a practice for qualitative
+research where claims in a paper link directly to the specific passage
+of source material that supports them, along with a brief explanation of
+why that passage supports the claim - not just a hyperlink - so a reader
+can check the evidence without re-doing the whole analysis. For example:
+linking a claim about a resident’s stated barrier directly to the
+relevant, de-identified excerpt of their interview transcript, with a
+sentence on why that excerpt supports the claim, rather than just a
+generic citation to “interview #14.” <a href="https://www.princeton.edu/~amoravcs/library/ps.pdf" class="external-link">Active
+Citation example</a>. A more tooled-up descendant of this idea, ATI
+(Annotation for Transparent Inquiry), comes from the Qualitative Data
+Repository (QDR) at Syracuse - whose director, Sebastian Karcher,
+co-taught the pilot workshop for this lesson series’ own <a href="https://ucla-imls-open-sci.info/lessons/open-qualitative-research-taguette/" class="external-link">Taguette
+lesson</a> above</li>
+</ul>
+<p>Once a finding - quantitative or qualitative - is ready to report,
+the writing tool matters less than what it preserves the connection
+to:</p>
+<ul>
+<li>
+<strong>R Markdown</strong> – Combines R code with text, both built
+on <strong>Markdown</strong>, a lightweight plain-text formatting syntax
+that converts to HTML, PDF, and other formats</li>
+<li>
+<strong>Quarto</strong> – Supports multiple languages; also
+markdown-based</li>
+<li>
+<strong>Jupyter Notebooks</strong> – The same Jupyter environment
+listed as an ELN above, used here for its other common purpose:
+combining live Python code with results and narrative for a written
+report</li>
+<li>
+<strong>HackMD</strong> – Collaborative markdown editor for
+co-writing</li>
+<li>
+<strong>Overleaf</strong> – An online editor for
+<strong>LaTeX</strong> (a document-preparation system commonly used for
+polished, technical documents)</li>
+</ul>
+<p><strong>Cool Access LA</strong>: the team codes interview transcripts
+in <strong>QualCoder</strong> or <strong>Taguette</strong>, then uses
+<strong>Active Citation</strong>-style annotation - each excerpt paired
+with a sentence on why it supports the claim - to link specific claims
+in the final report back to de-identified excerpts, without exposing the
+full restricted recordings. <strong>Quarto</strong> combines the
+quantitative survey results and the qualitative interview findings into
+one report - though assembling the writeup this way doesn’t by itself
+reproduce the reasoning behind the qualitative findings; that
+traceability comes from the coding scheme and annotations above, not
+from the writing tool.</p>
+<div id="making-qualitative-analysis-auditable-5-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="making-qualitative-analysis-auditable-5-min" class="callout-inner">
+<h3 class="callout-title">Making qualitative analysis auditable (~5
+min)</h3>
+<div class="callout-content">
+<p>Dr. Torres’s team wants to make their interview analysis auditable
+without exposing the restricted recordings. What tools or practices from
+this episode could help? If these tools are not available, what
+alternatives might work using familiar tools?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution5" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
+  <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
+</button>
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div class="accordion-body">
+<p>QualCoder or Taguette for coding (both free and open source, and both
+covered in their own Library Carpentry lessons linked above), or Active
+Citation practices to link report claims to de-identified excerpts.
+Without access to specialized software, a documented coding scheme in a
+shared spreadsheet, plus a written record of the analytic decisions made
+(why a passage was coded a certain way), can substitute for at least
+part of what dedicated qualitative tools provide.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="before-you-go">Before You Go<a class="anchor" aria-label="anchor" href="#before-you-go"></a>
+</h2>
+<hr class="half-width">
+<div id="before-you-go-3-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="before-you-go-3-min" class="callout-inner">
+<h3 class="callout-title">Before you go (~3 min)</h3>
+<div class="callout-content">
+<p>Pick one workflow gap - your own example, or one from Cool Access LA
+- and answer in a few sentences:</p>
+<ol style="list-style-type: decimal">
+<li>What’s the gap?</li>
+<li>Which practice or artifact from this episode would close it?</li>
+<li>What would that let someone check - and what would still be a
+limitation even after the gap is closed?</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution6" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
+  <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
+</button>
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div class="accordion-body">
+<p>Example: <strong>Gap</strong> - a script produces a figure but
+nothing records which version of the input data it ran against.
+<strong>Practice</strong> - version control on the script plus a named
+or dated data-file version (or a brief data-version note if full version
+control isn’t set up). <strong>What it enables</strong> - a second
+analyst can confirm they’re rerunning against matching inputs and
+compare results. <strong>Limitation</strong> - matching inputs and
+getting the same output confirms the analysis is reproducible; it
+doesn’t by itself confirm the analysis method was the right one to
+answer the research question.</p>
+<p>Any workflow gap, connected to a specific practice and a specific
+check plus its limitation, is a good answer. Naming a tool is useful
+shorthand for the practice, not the point of the exercise.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1002,11 +1925,18 @@ familiar tools?</li>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Research workflows include data collection, analysis, and
-reporting</li>
-<li>Each stage offers opportunities to improve reproducibility</li>
-<li>Many tools exist to support documentation, versioning, and
-sharing</li>
+<li>Research workflows include data collection, analysis, and reporting;
+each stage offers opportunities to improve reproducibility</li>
+<li>Match a tool to what you’re actually checking: can someone
+understand the materials, repeat the analysis steps, or trace the
+reported findings</li>
+<li>Use documentation (README, codebook) to explain what your data and
+steps mean, and version control (Git) to inspect and recover changes to
+your code over time</li>
+<li>A named artifact (a script, a data file) only closes a gap once it’s
+specifically connected to the claim it’s meant to support - identifying
+that missing connection is as important as knowing the tool that could
+fix it</li>
 </ul>
 </div>
 </div>
@@ -1015,10 +1945,9 @@ sharing</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </section></section><section id="aio-library-repro-role"><p>Content from <a href="library-repro-role.html">The Role of Libraries in Supporting Reproducibility</a></p>
 <hr>
-<p>Last updated on 2026-10-01 |
+<p>Last updated on 2026-10-03 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/library-repro-role.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1032,7 +1961,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What is the role of libraries in research improvement?</li>
+<li>What is the role of libraries in supporting reproducible
+research?</li>
 <li>How can library staff support researchers in improving
 reproducibility?</li>
 </ul>
@@ -1045,7 +1975,9 @@ reproducibility?</li>
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Describe how libraries support reproducible research</li>
-<li>Identify ways library staff can help improve research practices</li>
+<li>Given a description of a researcher’s request, recommend a specific
+check with its limit, and identify who is positioned to carry it
+out</li>
 </ul>
 </div>
 </div>
@@ -1055,10 +1987,14 @@ reproducibility?</li>
 <section><h2 class="section-heading" id="why-libraries">Why Libraries?<a class="anchor" aria-label="anchor" href="#why-libraries"></a>
 </h2>
 <hr class="half-width">
-<p>Libraries are well positioned to support reproducible research. Many
-already promote open access, open data, and good documentation
-practices. These skills and services align closely with reproducibility
-goals.</p>
+<p>Libraries are well positioned to support reproducible research: many
+library services that already exist (open access support, research data
+management, documentation guidance) map directly onto what
+reproducibility requires. For example, a funder now requiring a
+<strong>data management plan</strong> (a document describing how a
+project’s data will be organized, stored, and shared) with a documented,
+shareable dataset is asking for exactly the kind of support research
+data services already provide for other reasons.</p>
 <p>As funders and journals begin to expect not only open but also
 reproducible research, libraries can expand their support. Librarians
 work across disciplines and with researchers at all career stages. This
@@ -1067,29 +2003,208 @@ workflows.</p>
 </section><section><h2 class="section-heading" id="how-libraries-support-reproducibility">How Libraries Support Reproducibility<a class="anchor" aria-label="anchor" href="#how-libraries-support-reproducibility"></a>
 </h2>
 <hr class="half-width">
-<p>Libraries can help by:</p>
+<p>No single librarian is expected to do all of the following, and none
+of it is off-limits to a librarian who has the skills, authorized
+access, and service mandate for it. Depending on expertise, access, and
+capacity, library staff can teach a practice, implement it directly,
+collaborate with the research team, or bring in a specialist to assess
+it. Library staff can help by:</p>
 <ul>
-<li>Raising awareness and offering training on reproducible
-research</li>
+<li>Raising awareness and offering training on reproducible research (a
+familiar entry point for many libraries, though designing good training
+is itself a real skill, not a trivial add-on)</li>
 <li>Supporting transparent research practices, including documenting
 methods, sharing data, and explaining analysis steps</li>
 <li>Helping researchers create clear, consistent documentation for all
 stages of a project</li>
+<li>Reviewing a project’s documentation and workflow for clarity and
+completeness, so someone - the researcher’s own team, or an
+appropriately skilled and authorized librarian - can rerun it later</li>
 <li>Advising on version control tools to track changes in code, data, or
-manuscripts</li>
-<li>Reviewing data and workflows to improve quality and clarity</li>
-<li>Assisting researchers in reproducing their own results</li>
+manuscripts, at whatever depth local skills support: pointing to a
+resource, troubleshooting hands-on, or referring to a research computing
+partner</li>
+<li>Directly comparing versions of a committed script to identify
+exactly what changed, or helping restore a documented computing
+environment from a recorded lockfile - concrete technical tasks some
+libraries take on themselves, where staff have the tools and training
+for it</li>
 </ul>
-<div id="reflection" class="callout challenge">
+<div id="which-service-applies-4-min" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="reflection" class="callout-inner">
-<h3 class="callout-title">Reflection</h3>
+<div id="which-service-applies-4-min" class="callout-inner">
+<h3 class="callout-title">Which service applies? (~4 min)</h3>
+<div class="callout-content">
+<p>Dr. Torres, from Cool Access LA in the previous two episodes, emails
+you: “My interview recordings have to stay in a secure, IRB-approved
+system for privacy reasons, but my funder is now asking for a
+<strong>reproducibility statement</strong> (a description of what
+someone would need in order to check or rerun the work, including any
+access limits). I have my analysis scripts and some scattered notes, but
+nothing written up in a way someone else could follow, and I don’t know
+where to start. What would you help me document first, and who would
+handle any decisions about access?”</p>
+<p>Which of the services listed above would you reach for first? Write
+your answer as a short three-line note: what you know, what’s missing,
+and the next action - including a specific check that would show whether
+the improvement helped, who would perform it, and what it would and
+wouldn’t tell you.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p><strong>What we know</strong>: the interview recordings must stay in
+the secure, IRB-approved system; the funder wants a reproducibility
+statement; Dr. Torres already has scripts and notes, but says herself
+that nothing is written up yet.</p>
+<p><strong>What’s missing</strong>: not the underlying materials - she
+has those - but a documented account of the data processing and analysis
+steps, organized clearly enough for another approved team member to
+follow. Start by looking at what her scripts and notes already cover
+before assuming a gap; the missing piece may be organization and
+explanation, not content from scratch. “Reproducible” does not require
+the recordings to leave the secure system or become public - that’s an
+openness question, not a reproducibility one.</p>
+<p><strong>Next action</strong>: start a documentation and workflow
+review with Dr. Torres - reading through what she has, then helping her
+fill in and organize the rest. Once a first version exists, the concrete
+check is: an authorized member of Dr. Torres’s own team retraces one
+specific claim in the draft report - for example, the interview claim
+about walking to the library for air conditioning - through its approved
+excerpt and analytic note, recording where the explanation holds up and
+where it’s still thin. That check shows whether the documentation is
+followable for <em>that</em> claim; it doesn’t confirm the survey
+analysis is reproducible, which would need a separate rerun. Decisions
+about access to the restricted recordings stay with Dr. Torres’s team
+and their IRB protocol.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="which-service-applies-4-min" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="which-service-applies-4-min" class="callout-inner">
+<h3 class="callout-title">Which service applies? (~4 min)<em>
+(continued)</em>
+</h3>
+<div class="callout-content">
+<p><strong>Alternative scenario, same case</strong> (use instead of the
+one above, not in addition - both fit the same four minutes):
+Dr. Torres’s collaborator can’t recreate the software setup needed to
+rerun the analysis on a new machine. What service or partner would you
+point them to, and what specific check would confirm whether it’s
+fixed?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Start by checking the setup instructions and recorded software
+versions - a missing dependency or an unrecorded version is often the
+actual cause, and that’s a documentation gap you can help close. Where a
+librarian has the skills, the concrete check is comparing the recorded
+package versions (e.g. in a lockfile) against what’s actually installed
+on the collaborator’s machine, noting exactly which versions differ.
+That comparison shows whether the <em>environment</em> now matches
+what’s recorded - it does not by itself confirm the analysis reproduces;
+that still needs an actual rerun once the environment is fixed. If
+rebuilding the environment itself needs expertise beyond what’s locally
+available, refer the researcher to research computing or an appropriate
+IT partner.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="reflection-4-min" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="reflection-4-min" class="callout-inner">
+<h3 class="callout-title">Reflection (~4 min)</h3>
 <div class="callout-content">
 <p>What is one area where you think libraries can make the biggest
-difference in supporting reproducible research?</p>
+difference in supporting reproducible research? Given your own library’s
+staffing and expertise, which of the areas above feel realistic to take
+on, and which would need new skills or partners?</p>
+<p><strong>Possible answers</strong>: awareness-raising and
+documentation support are realistic starting points for most libraries
+since they build on existing reference and instruction skills. How far a
+library can go with version-control or environment-management tasks
+varies a lot by staffing - some libraries have people who do this
+hands-on, others rely on training up existing staff or partnering with a
+research computing group. Neither is the “correct” level; the point is
+knowing which one describes your library.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="back-to-the-process-from-the-introduction">Back to the process from the Introduction<a class="anchor" aria-label="anchor" href="#back-to-the-process-from-the-introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Recall the consultation flow from the Introduction: identify what
+needs checking, find the materials and decisions behind it, plan and
+attempt a scoped check, and agree a next action - whether the attempt
+was blocked by a gap or completed. Every exercise in this lesson - the
+packet-connection and README questions, the Git scenario, the
+qualitative-auditability question, and the two scenarios above - has
+been one pass through that same flow.</p>
+<pre class="mermaid"><code>flowchart TD
+    accTitle: Librarian consultation flow
+    accDescr: From a result or output that needs checking, through identifying its materials, planning and attempting a scoped check, to recording the outcome and agreeing a next action - whether or not the check was blocked by a gap.
+    A["What result or output needs checking?"]
+    A --&gt; B["Identify the materials and decisions behind it"]
+    B --&gt; C["Plan a scoped check: rerun a computation, compare versions, or trace evidence to an interpretation"]
+    C --&gt; D["Attempt the check with the access and information available"]
+    D --&gt;|Blocked by a gap| E["Record the specific gap and recommend an improvement, with an owner"]
+    D --&gt;|Completed| F["Record what it showed - a match, a discrepancy, or a partial result"]
+    E --&gt; G["Agree the next action"]
+    F --&gt; G</code></pre>
+<p><em>The same librarian consultation flow from the Introduction. Which
+parts a library takes on varies by staffing and expertise, not a fixed
+division of labor: some libraries mainly help identify materials and
+plan a check; others, with the right skills and access, also attempt the
+check itself. What matters is agreeing who does what for a given request
+- the same judgment call this episode’s exercises asked you to
+make.</em></p>
+<div id="text-equivalent-of-the-diagram-above" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="text-equivalent-of-the-diagram-above" class="callout-inner">
+<h3 class="callout-title">Text equivalent of the diagram above</h3>
+<div class="callout-content">
+<ol style="list-style-type: decimal">
+<li>Start: what result or output needs checking?</li>
+<li>Identify the materials and decisions that support it.</li>
+<li>Plan a scoped check - for example, rerunning a computation,
+comparing versions, or tracing evidence back to an interpretation. Full
+traceability isn’t required before attempting a limited check.</li>
+<li>Attempt the check with the access and information actually
+available.</li>
+<li>If the attempt is blocked by a gap: record exactly what’s missing
+and recommend a specific improvement, with an owner. If the attempt is
+completed: record what it showed - a match, a discrepancy, or a partial
+result. Completing a check doesn’t automatically mean it succeeded.</li>
+<li>End: agree the next action, based on what’s known so far.</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1102,9 +2217,13 @@ difference in supporting reproducible research?</p>
 <div class="callout-content">
 <ul>
 <li>Libraries are natural partners in supporting open and reproducible
-research</li>
-<li>Librarians can help researchers improve transparency, documentation,
-and workflows</li>
+research, because much of the required support already exists as library
+services under other names</li>
+<li>Library support for reproducibility ranges from familiar entry
+points (awareness, documentation) to more specialized, technical
+services (version control, environment comparisons) - which level a
+given library offers depends on staffing and expertise, not a fixed rule
+about what librarians do or don’t do</li>
 <li>Reproducibility support builds on existing library expertise in
 research data and scholarly communication</li>
 </ul>
@@ -1134,8 +2253,8 @@ any links that you are not going to use.
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/" class="external-link">Source</a></p>
         <p>
-        <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/" class="external-link">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        <a href="citation.html">Cite</a>
+        | <a href="mailto:team@librarycarpentry.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -1165,8 +2284,8 @@ any links that you are not going to use.
   "url": "https://LibraryCarpentry.github.io/lc-reproducible-research/aio.html",
   "identifier": "https://LibraryCarpentry.github.io/lc-reproducible-research/aio.html",
   "dateCreated": "2023-08-16",
-  "dateModified": "2026-10-01",
-  "datePublished": "2026-10-01"
+  "dateModified": "2026-10-03",
+  "datePublished": "2026-10-03"
 }
 
   </script><script>

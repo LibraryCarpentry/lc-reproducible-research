@@ -16,6 +16,9 @@
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/aio.html</loc>
   </url>
   <url>
+    <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/citation.html</loc>
+  </url>
+  <url>
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/episode-1.html</loc>
   </url>
   <url>
@@ -49,6 +52,9 @@
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/aio.html</loc>
   </url>
   <url>
+    <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/citation.html</loc>
+  </url>
+  <url>
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/episode-1.html</loc>
   </url>
   <url>
@@ -79,6 +85,9 @@
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/library-repro-role.html</loc>
   </url>
   <url>
+    <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/making-research-checkable.html</loc>
+  </url>
+  <url>
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/profiles.html</loc>
   </url>
   <url>
@@ -94,6 +103,9 @@
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/reproducible-research-overview.html</loc>
   </url>
   <url>
+    <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/instructor/understanding-reproducibility.html</loc>
+  </url>
+  <url>
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/instructor-notes.html</loc>
   </url>
   <url>
@@ -104,6 +116,9 @@
   </url>
   <url>
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/library-repro-role.html</loc>
+  </url>
+  <url>
+    <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/making-research-checkable.html</loc>
   </url>
   <url>
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/profiles.html</loc>
@@ -119,5 +134,8 @@
   </url>
   <url>
     <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/reproducible-research-overview.html</loc>
+  </url>
+  <url>
+    <loc>https://LibraryCarpentry.github.io/lc-reproducible-research/understanding-reproducibility.html</loc>
   </url>
 </urlset>

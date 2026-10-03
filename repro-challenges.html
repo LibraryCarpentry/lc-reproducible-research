@@ -123,7 +123,7 @@
     <a id="search-button-nav" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress library">
-    <div class="progress-bar library" role="progressbar" style="width: 36%" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">36%</div>
+    <div class="progress-bar library" role="progressbar" style="width: 43%" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">43%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -217,7 +217,16 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="reproducible-research-overview.html">2. What is Reproducible Research?</a>
+        <a href="understanding-reproducibility.html">2. Understanding Reproducibility</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="making-research-checkable.html">3. Making Research Checkable</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -229,7 +238,7 @@
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
-        3. Benefits and Challenges of Reproducibility
+        4. Benefits and Challenges of Reproducibility
         </span>
       </button>
     </div><!--/div.accordion-header-->
@@ -246,19 +255,19 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
-<div class="accordion accordion-flush" id="accordionFlush5">
+<div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading5">
-        <a href="repro-tools.html">4. Tools for Reproducible Research Workflows</a>
+    <div class="accordion-header" id="flush-heading6">
+        <a href="repro-tools.html">5. Tools for Reproducible Research Workflows</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
-<div class="accordion accordion-flush" id="accordionFlush6">
+<div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading6">
-        <a href="library-repro-role.html">5. The Role of Libraries in Supporting Reproducibility</a>
+    <div class="accordion-header" id="flush-heading7">
+        <a href="library-repro-role.html">6. The Role of Libraries in Supporting Reproducibility</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -320,14 +329,14 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="reproducible-research-overview.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="making-research-checkable.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="repro-tools.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="reproducible-research-overview.html" rel="prev">
+        <a class="chapter-link" href="making-research-checkable.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: What is Reproducible Research?...
+          Previous: Making Research Checkable...
         </a>
         <a class="chapter-link float-end" href="repro-tools.html" rel="next">
           Next: Tools for Reproducible Research...
@@ -336,7 +345,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Benefits and Challenges of Reproducibility</h1>
-        <p>Last updated on 2026-10-01 |
+        <p>Last updated on 2026-10-03 |
 
         <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/edit/main/episodes/repro-challenges.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -375,6 +384,13 @@ challenge</li>
 </div>
 </div>
 </div>
+<p>The previous episode ended with a question: what would you ask a
+researcher for, before you could judge whether their work can be
+checked? Often, the honest answer is that the researcher hasn’t been
+able to provide it yet - not from unwillingness, but because
+reproducibility takes real time, skill, and sometimes runs into legal or
+ethical limits. This episode looks at why, and what a librarian can
+realistically do about it.</p>
 <section><h2 class="section-heading" id="benefits-for-science">Benefits for Science<a class="anchor" aria-label="anchor" href="#benefits-for-science"></a></h2>
 <hr class="half-width"><p>Reproducibility strengthens research by making it:</p>
 <ul><li>Easier to <strong>verify</strong>, helping others detect errors</li>
@@ -399,8 +415,12 @@ in grant reviews and assessments</li>
 <span class="callout-header">Discussion</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Name one benefit of reproducibility for science and one for
-individual researchers. Why are these important?</p>
+<p>(~5 min)</p>
+<p>As a group, name four benefits of reproducibility total - at least
+one for science and one for individual researchers. Then pick one and
+explain specifically how it helps someone detect an error or scrutinize
+a claim (that’s the research-integrity connection, not just
+convenience).</p>
 </div>
 </div>
 </div>
@@ -430,19 +450,42 @@ researchers learn best practices</li>
 can enable controlled sharing</li>
 <li>
 <strong>Technical issues</strong>: Guidance on software
-documentation and environment capture can help others reproduce
+documentation and environment capture (recording the software and
+versions needed to rerun an analysis) can help others reproduce
 results</li>
-</ul><div id="discussion2" class="callout discussion">
+</ul><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p><strong>Back to Cool Access LA</strong> (introduced in the previous
+episode): a new research assistant is joining Dr. Torres’s team and
+needs to pick up the project from the documentation alone - the README,
+codebook, and analysis scripts have to carry knowledge that would
+otherwise live only in Dr. Torres’s head, and that takes time and skill
+to write well. Separately, the team’s interview recordings stay in a
+secure system under the study’s Institutional Review Board (IRB)
+protocol - a legal/ethical restriction, not a technical one, and one
+factor among several rather than the project’s only obstacle.</p>
+</div>
+</div>
+</div>
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Pick one challenge researchers face when making their work
-reproducible.<br>
-Talk with a partner about how you, as a librarian or support staff
-member, could help address that challenge.</p>
+<p>(~5 min)</p>
+<p>First, as a group, list four challenges researchers face in making
+work reproducible (use the list above or your own experience). Then pick
+one - the documentation handoff to a new team member, Dr. Torres’s
+interview-recording restriction, or one of your own - and with a
+partner, name one feasible next action that addresses it and who would
+take it.</p>
 </div>
 </div>
 </div>
@@ -468,14 +511,14 @@ any links that you are not going to use.
  -->
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="reproducible-research-overview.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="making-research-checkable.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="repro-tools.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="reproducible-research-overview.html" rel="prev">
+        <a class="chapter-link" href="making-research-checkable.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: What is Reproducible Research?...
+          Previous: Making Research Checkable...
         </a>
         <a class="chapter-link float-end" href="repro-tools.html" rel="next">
           Next: Tools for Reproducible Research...
@@ -496,8 +539,8 @@ any links that you are not going to use.
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/" class="external-link">Source</a></p>
         <p>
-        <a href="https://github.com/LibraryCarpentry/lc-reproducible-research/blob/main/" class="external-link">Cite</a>
-        | <a href="mailto:team@carpentries.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        <a href="citation.html">Cite</a>
+        | <a href="mailto:team@librarycarpentry.org">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -526,8 +569,8 @@ any links that you are not going to use.
   "url": "https://LibraryCarpentry.github.io/lc-reproducible-research/repro-challenges.html",
   "identifier": "https://LibraryCarpentry.github.io/lc-reproducible-research/repro-challenges.html",
   "dateCreated": "2023-08-16",
-  "dateModified": "2026-10-01",
-  "datePublished": "2026-10-01"
+  "dateModified": "2026-10-03",
+  "datePublished": "2026-10-03"
 }
 
   </script><script>
