@@ -49,3 +49,6 @@ docs/
 # translation temp files
 po/*~
 
+
+# Session handoff notes (local only)
+HANDOFF.md

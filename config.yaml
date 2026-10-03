@@ -33,7 +33,7 @@ source: 'https://github.com/LibraryCarpentry/lc-reproducible-research'
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org'
+contact: 'team@librarycarpentry.org'
 
 # Navigation ------------------------------------------------
 #
@@ -58,9 +58,10 @@ contact: 'team@carpentries.org'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - introduction.md
-- reproducible-research-overview.md
+- understanding-reproducibility.md
+- making-research-checkable.md
 - repro-challenges.md
 - repro-tools.md
 - library-repro-role.md
